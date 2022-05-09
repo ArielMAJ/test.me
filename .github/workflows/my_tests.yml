@@ -3,8 +3,8 @@ name: Test Some Assignment
 on:
   push:
     branches: [ main ]
-    paths:
-      - './Questoes/'
+#     paths:
+#       - './Questoes/'
 
 env:
   BASE_FOLDER: ./Questoes/
