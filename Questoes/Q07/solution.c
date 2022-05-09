@@ -1,6 +1,5 @@
 #include <stdio.h>
 	
-// unsigned int fib(int k);
 unsigned int fib(int k);
 
 int main(void)
