@@ -1,10 +1,10 @@
-name: Q06
+name: Q14
 
 on:
   push:
     branches: [ main ]
     paths:
-      - './Questoes/06/'
+      - './Questoes/14/'
 
 jobs:
   Check:
@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        test_folder: [Q06]
+        test_folder: [Q14]
         test: [1, 2, 3, 4]
     
     env:

@@ -1,10 +1,10 @@
-name: Test Some Assignment
+name: Q04
 
 on:
   push:
     branches: [ main ]
-    # paths:
-    #   - './Questoes/04/'
+    paths:
+      - './Questoes/04/'
 
 jobs:
   Check:
