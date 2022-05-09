@@ -6,9 +6,6 @@ on:
 #     paths:
 #       - './Questoes/'
 
-env:
-  BASE_FOLDER: ./Questoes/
-
 jobs:
   Check:
     runs-on: ubuntu-latest
@@ -117,6 +114,9 @@ jobs:
             test: 7
           - test_folder: Q17
             test: 8
+    
+    env:
+      BASE_FOLDER: ./Questoes/
 
     steps:
     - uses: actions/checkout@v3
