@@ -1,7 +1,5 @@
 # Exercício: Questão 01 - Lista Programação (Multiplica)
 
-
-
 Seu código deve ler a seguinte entrada:
 
 ```
