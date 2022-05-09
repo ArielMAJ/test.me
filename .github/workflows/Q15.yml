@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - './Questoes/15/'
+      - './Questoes/Q15/'
 
 jobs:
   Check:
