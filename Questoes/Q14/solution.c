@@ -20,7 +20,7 @@ int main(void)
 	float resultado = somadiagonal(mat, rows, columns);
 	free_matrix(mat, rows);
 
-	printf("%.1f", resultado);
+	printf("%.1f\n", resultado);
 
 	return 0;
 }

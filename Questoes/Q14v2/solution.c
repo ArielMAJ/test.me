@@ -17,7 +17,7 @@ int main(void)
 	float resultado = detord2(mat);
 	free_matrix(mat, 2);
 
-	printf("%.1f", resultado);
+	printf("%.1f\n", resultado);
 
 	return 0;
 }

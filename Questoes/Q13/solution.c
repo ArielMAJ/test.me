@@ -24,7 +24,7 @@ int main(void)
 	float resultado = somacoluna(mat, rows, 0);
 	free_matrix(mat, rows);
 
-	printf("%.1f", resultado);
+	printf("%.1f\n", resultado);
 
 	return 0;
 }
