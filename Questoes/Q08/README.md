@@ -1,26 +1,28 @@
-Arquivo zip gerado em: 08/05/2022 17:08:16 
+# Exercício: Questão 08 - Lista Programação (Multiplos)
+
+Arquivo zip gerado em: 08/05/2022 16:58:03 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 11 - Lista Programação (Media)
-
-
-
 
 
 Seu código deve ler a seguinte entrada:
 
 ```
-2 5 3 
-1.1 2.2 3.3 4.4 5.5
-1.1 2.2 3.3
+5
+3
+4
+5
+6
+7
 ```
 
-O primeiro valor da primeira linha informa quantas linhas devem ser lidas. Os valores subsequentes são os tamanhos de cada vetor nas linhas subsequentes.
+A primeira linha informa quantas linhas subsequentes devem ser processadas pelo seu programa. Nesse exemplo, os parâmetros da sua função estão nas linhas seguintes: "3", "4", "5", "6" e "7" (seu código deve chamar a função com cada um desses parâmetros).
 
-Nesse exemplo, "2 5 3" informa que seu programa deve ler 2 linhas: na primeira há um vetor de tamanho 5, na segunda há um vetor de tamanho 3.
+Sua função deve retornar a soma de todos os números **naturais** múltiplos de 3 ou 5 **abaixo** do parâmetro recebido.
 
-Sua função deve receber um vetor e retornar a média dos elementos encontrados nele. Seu programa deve imprimir a média de cada vetor (limitado a uma casa decimal). Cada valor deve estar em uma nova linha.
+Seu código deve imprimir um resultado por linha.
 
+Ex.: Se listarmos todos os números naturais **abaixo** de 10 que são múltiplos de 3 ou 5, temos 3, 5, 6, 9, cuja soma é 23.
 
 #### Observações Importantes:
 

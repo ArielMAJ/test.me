@@ -1,27 +1,32 @@
-Arquivo zip gerado em: 08/05/2022 16:58:11 
+# Exercício: Questão 18 - Lista Programação (MultiMat)
+
+Arquivo zip gerado em: 08/05/2022 16:58:13 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 17 - Lista Programação (MediaMat)
-
 
 
 Seu código deve ler a seguinte entrada:
 ```
-2
+3
 2 3
-1.0 2.0 3.0
-4.0 5.0 6.0
-3 3
-1.0 2.0 3.0
-4.0 5.0 6.0
-7.0 8.0 9.0
+2.0 2.0 2.0
+2.0 2.0 2.0
+2 3
+3.0 3.0 3.0
+3.0 3.0 3.0
+2 3
+0.5 0.5 0.5
+0.5 0.5 0.5
 ```
 Seu código deve:
 1. **Criar** matrizes a partir da entrada;
-2. Implementar uma função ("MediaMat") que recebe uma matriz e retorna a média dos valores nela;
-3. Imprimir a média dos valores de cada matriz (2 casas decimais): cada resultado deve estar em uma nova linha na mesma ordem das matrizes.
+2. Implementar uma função ("MultiMat") que recebe duas matrizes e retorna a multiplicação dos valores nela;<br>
+&#9;&#9;&#9;a. As "n" matrizes terão o mesmo formato;<br>
+&#9;&#9;&#9;b. A multiplicação se dará por &prod;<sub>n</sub>a<sub>n</sub>[i][j];<br>
+&#9;&#9;&#9;c. Não confundir com Produto Escalar (que é a próxima questão).
+3. Imprimir a matriz final após multiplicar "n" matrizes em sequência (1 casa decimal).
 
-Nesse exemplo, "2" informa quantas matrizes serão lidas. A linha seguinte informa as dimensões da matriz (2x3), seguida pela matriz. Todos os casos estarão dentro desse padrão.
+Nesse exemplo, "3" informa quantas matrizes serão lidas e multiplicadas em sequência. A linha seguinte informa as dimensões da matriz (2x3), seguida pela matriz. Todos os casos estarão dentro desse padrão. Considere que você sempre receberá uma sequência válida de matrizes para o cálculo da multiplicação.
 
 
 <details>

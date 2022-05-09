@@ -1,28 +1,25 @@
-Arquivo zip gerado em: 08/05/2022 16:58:10 
+# Exercício: Questão 14v2 - Lista Programação (DetOrd2)
+
+Arquivo zip gerado em: 08/05/2022 16:58:09 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 16 - Lista Programação (SomaAcumulativa)
-
 
 
 Seu código deve ler a seguinte entrada:
+
 ```
-2 4 5
-1.0 2.0 3.0 4.0
-1.0 2.0 3.0 4.0 5.0
+1.3 2.0
+0.2 2.0
 ```
 Seu código deve:
-1. **Criar** vetores a partir da entrada;
-2. Implementar uma função (SomaAcumulativa) que recebe um vetor e retorna um vetor com a soma acumulativa;
-3. Imprimir os vetores resultantes do processamento das entradas (1 casa decimal).
-
-Nesse exemplo, "2 4 5" informa que haverá "n=2" vetores tamanho "l1=4" e "l2=5" para serem lidos nessa sequência.
+1. **Criar** uma matriz 2x2 a partir da entrada;
+2. Calcular o determinante dessa matriz (ordem 2) com uma função ("DetOrd2"); e
+3. Imprimir o resultado desse cálculo (1 casa decimal).
 
 
 <details>
   <summary>Recomendações  (clicar para ler)</summary>
-  1. Se decidir alocar memória para os vetores, lembre-se de liberar essa memória também;
-  2. Se você alocar memória dentro de um loop e reutilizar uma mesma variável para novas alocações, lembre-se de liberar essa memória no fim do loop antes de novas alocações também;
+  1. Se decidir alocar memória para as matrizes, lembre-se de liberar essa memória também;
 </details>
 
 

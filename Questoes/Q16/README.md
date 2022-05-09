@@ -1,50 +1,30 @@
-Arquivo zip gerado em: 08/05/2022 16:58:12 
+# Exercício: Questão 16 - Lista Programação (SomaAcumulativa)
+
+Arquivo zip gerado em: 08/05/2022 16:58:10 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 19 - Lista Programação (ProdEsc)
-
 
 
 Seu código deve ler a seguinte entrada:
 ```
-3
-2 3
-2.0 2.0 2.0
-2.0 2.0 2.0
-3 2
-3.0 3.0
-3.0 3.0
-3.0 3.0
-2 2
-0.1 0.1
-0.1 0.1
+2 4 5
+1.0 2.0 3.0 4.0
+1.0 2.0 3.0 4.0 5.0
 ```
 Seu código deve:
-1. **Criar** matrizes a partir da entrada;
-2. Implementar uma função ("ProdEsc") que recebe duas matrizes e retorna a matriz resultante do produto escalar de duas matrizes;
-3. Imprimir a matriz final após realizar o produto escalar de "n" matrizes em sequência (1 casa decimal).
+1. **Criar** vetores a partir da entrada;
+2. Implementar uma função (SomaAcumulativa) que recebe um vetor e retorna um vetor com a soma acumulativa;
+3. Imprimir os vetores resultantes do processamento das entradas (1 casa decimal).
 
+Nesse exemplo, "2 4 5" informa que haverá "n=2" vetores tamanho "l1=4" e "l2=5" para serem lidos nessa sequência.
 
-Nesse exemplo, "3" informa quantas matrizes serão lidas e multiplicadas em sequência. A linha seguinte informa as dimensões da matriz (2x3), seguida pela matriz. Todos os casos estarão dentro desse padrão. Considere que você sempre receberá uma sequência válida de matrizes para o cálculo do produto escalar.
-
-Considerando as 3 matrizes A, B e C do exemplo acima, você deve fazer ((A@B)@C)  (aqui "@" representa o produto escalar).
-
-A@B:
-```
-18.0 18.0
-18.0 18.0
-```
-(A@B)@C:
-```
-3.6 3.6
-3.6 3.6
-```
 
 <details>
   <summary>Recomendações  (clicar para ler)</summary>
-  1. Se decidir alocar memória para as matrizes, lembre-se de liberar essa memória também;
+  1. Se decidir alocar memória para os vetores, lembre-se de liberar essa memória também;
   2. Se você alocar memória dentro de um loop e reutilizar uma mesma variável para novas alocações, lembre-se de liberar essa memória no fim do loop antes de novas alocações também;
 </details>
+
 
 
 #### Observações Importantes:

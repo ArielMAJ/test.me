@@ -1,20 +1,24 @@
-Arquivo zip gerado em: 08/05/2022 16:58:04 
+# Exercício: Questão 11 - Lista Programação (Media)
+
+Arquivo zip gerado em: 08/05/2022 17:08:16 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 09 - Lista Programação (Maior)
-
 
 
 Seu código deve ler a seguinte entrada:
 
 ```
-10
-1 2 3 4 5 6 7 8 9 10
+2 5 3 
+1.1 2.2 3.3 4.4 5.5
+1.1 2.2 3.3
 ```
 
-A primeira linha informa o tamanho do vetor na linha subsequente, o qual deve ser processado pelo seu programa. Nesse exemplo, o parâmetro da sua função está na linha seguinte: "1 2 3 4 5 6 7 8 9 10"
+O primeiro valor da primeira linha informa quantas linhas devem ser lidas. Os valores subsequentes são os tamanhos de cada vetor nas linhas subsequentes.
 
-Sua função deve receber um vetor e retornar a posição da primeira ocorrência do maior número encontrado nele. Seu programa deve imprimir a posição e o valor do maior número (ex.: "9 10").
+Nesse exemplo, "2 5 3" informa que seu programa deve ler 2 linhas: na primeira há um vetor de tamanho 5, na segunda há um vetor de tamanho 3.
+
+Sua função deve receber um vetor e retornar a média dos elementos encontrados nele. Seu programa deve imprimir a média de cada vetor (limitado a uma casa decimal). Cada valor deve estar em uma nova linha.
+
 
 #### Observações Importantes:
 

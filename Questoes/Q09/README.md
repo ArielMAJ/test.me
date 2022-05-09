@@ -1,29 +1,20 @@
-Arquivo zip gerado em: 08/05/2022 16:58:03 
+# Exercício: Questão 09 - Lista Programação (Maior)
+
+Arquivo zip gerado em: 08/05/2022 16:58:04 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 08 - Lista Programação (Multiplos)
-
-
 
 
 Seu código deve ler a seguinte entrada:
 
 ```
-5
-3
-4
-5
-6
-7
+10
+1 2 3 4 5 6 7 8 9 10
 ```
 
-A primeira linha informa quantas linhas subsequentes devem ser processadas pelo seu programa. Nesse exemplo, os parâmetros da sua função estão nas linhas seguintes: "3", "4", "5", "6" e "7" (seu código deve chamar a função com cada um desses parâmetros).
+A primeira linha informa o tamanho do vetor na linha subsequente, o qual deve ser processado pelo seu programa. Nesse exemplo, o parâmetro da sua função está na linha seguinte: "1 2 3 4 5 6 7 8 9 10"
 
-Sua função deve retornar a soma de todos os números **naturais** múltiplos de 3 ou 5 **abaixo** do parâmetro recebido.
-
-Seu código deve imprimir um resultado por linha.
-
-Ex.: Se listarmos todos os números naturais **abaixo** de 10 que são múltiplos de 3 ou 5, temos 3, 5, 6, 9, cuja soma é 23.
+Sua função deve receber um vetor e retornar a posição da primeira ocorrência do maior número encontrado nele. Seu programa deve imprimir a posição e o valor do maior número (ex.: "9 10").
 
 #### Observações Importantes:
 

@@ -1,9 +1,8 @@
+# Exercício: Questão 14 - Lista Programação (SomaDiagonal)
+
 Arquivo zip gerado em: 08/05/2022 16:58:12 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 14 - Lista Programação (SomaDiagonal)
-
-
 
 
 Seu código deve ler a seguinte entrada:
