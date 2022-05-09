@@ -13,7 +13,11 @@ int main(void)
 	{
 		scanf("%d", &n);
 		for (int j = 0; j <= n; j++)
-			printf("%u ", fib(j));
+		{
+			printf("%u", fib(j));
+			if (j != n)
+				print(" ");
+		}
 		printf("\n");
 	}
 
