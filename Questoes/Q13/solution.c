@@ -103,7 +103,7 @@ void print_matrix(float **mat, int rows, int columns)
 		{
 			printf("%.1f", mat[row][column]);
 			if (column != columns - 1)
-				printf(" ")
+				printf(" ");
 		}
 		printf("\n");
 	}
