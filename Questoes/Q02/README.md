@@ -1,9 +1,7 @@
+# Exercício: Questão 02 - Lista Programação (Divide)
 Arquivo zip gerado em: 08/05/2022 16:57:56 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 02 - Lista Programação (Divide)
-
-
 
 
 Seu código deve ler a seguinte entrada:
