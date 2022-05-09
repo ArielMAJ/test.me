@@ -81,12 +81,17 @@ void free_matrix(float **mat, int rows)
 
 	return;
 }
+
 void print_matrix(float **mat, int rows, int columns)
 {
 	for (int row = 0; row < rows; row++)
 	{
 		for (int column = 0; column < columns; column++)
-			printf("%.1f ", mat[row][column]);
+		{
+			printf("%.1f", mat[row][column]);
+			if (column != columns - 1)
+				printf(" ")
+		}
 		printf("\n");
 	}
 }

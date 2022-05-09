@@ -59,6 +59,10 @@ float * scan_vect(int length)
 void print_vect(float *vect, int length)
 {
 	for (int i = 0; i < length; i++)
-		printf("%.1f ", vect[i]);
+	{
+		printf("%.1f", vect[i]);
+		if (i != length - 1)
+			printf(" ")
+	}
 	printf("\n");
 }
