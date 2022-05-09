@@ -13,7 +13,7 @@ int main(void)
 		scanf("%d", &vect[i]);
 	
 	int pos = maior(vect, lenght);
-	printf("%d %d", pos, vect[pos]);
+	printf("%d %d\n", pos, vect[pos]);
 
 	return 0;
 }

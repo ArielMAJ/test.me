@@ -2,6 +2,8 @@
 	
 unsigned int fib(int k);
 
+unsigned int v_fib[47] = {1, 1};
+
 int main(void)
 {
 	int n_linhas;
@@ -22,7 +24,7 @@ int main(void)
 
 unsigned int fib(int k)
 {
-	static unsigned int v_fib[70] = {1, 1};
+	
 
 	if (v_fib[k] > 0)
 		return v_fib[k];
