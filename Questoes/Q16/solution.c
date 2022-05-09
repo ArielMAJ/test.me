@@ -62,7 +62,7 @@ void print_vect(float *vect, int length)
 	{
 		printf("%.1f", vect[i]);
 		if (i != length - 1)
-			printf(" ")
+			printf(" ");
 	}
 	printf("\n");
 }
