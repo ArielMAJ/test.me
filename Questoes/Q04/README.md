@@ -1,21 +1,20 @@
-Arquivo zip gerado em: 08/05/2022 16:58:01 
+# Exercício: Questão 04 - Lista Programação (Primo)
+
+Arquivo zip gerado em: 08/05/2022 16:57:59 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 06 - Lista Programação (Inteiros)
-
-
-
 
 
 Seu código deve ler a seguinte entrada:
-```
-2
-4
-5
-```
-A primeira linha informa quantas linhas subsequentes devem ser processadas pelo seu programa. Nesse exemplo, os parâmetros da sua função estão nas linhas seguintes: "4" e "5"
 
-Sua função deve receber um tipo inteiro (int) e retornar um tipo inteiro (int). O valor retornado deve ser a soma de todos os inteiros positivos entre 1 e o parâmetro passado (inclusivo). Seu código deve imprimir um resultado por linha.
+```
+1
+19
+```
+
+A primeira linha informa quantas linhas subsequentes devem ser processadas pelo seu programa. Nesse exemplo, o parâmetro da sua função está na linha seguinte: 19
+
+Sua função deve retornar "1" se a entrada for um número primo e "0" caso contrário.
 
 #### Observações Importantes:
 

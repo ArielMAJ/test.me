@@ -1,30 +1,19 @@
-Arquivo zip gerado em: 08/05/2022 16:58:00 
+# Exercício: Questão 06 - Lista Programação (Inteiros)
+
+Arquivo zip gerado em: 08/05/2022 16:58:01 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 05 - Lista Programação (Fatorial)
-
-
-
 
 
 Seu código deve ler a seguinte entrada:
-
 ```
 2
 4
 5
 ```
-
 A primeira linha informa quantas linhas subsequentes devem ser processadas pelo seu programa. Nesse exemplo, os parâmetros da sua função estão nas linhas seguintes: "4" e "5"
 
-Sua função deve retornar o fatorial do parâmetro passado. Seu código deve imprimir um resultado por linha. 
-
-
-Tente fazer sem as dicas primeiro.
-
-- <details><summary>Dica 01 (clicar)</summary>Inteiros costumam ter 4 bytes (4*8 = 32 bits) de espaço. Isso significa que podem representar até 2^32 valores (divido em metade para positivos e metade para negativos).</details>
-- <details><summary>Dica 02 (clicar)</summary>Que tal pesquisar tipos que consigam representar "13!" ?</details>
-
+Sua função deve receber um tipo inteiro (int) e retornar um tipo inteiro (int). O valor retornado deve ser a soma de todos os inteiros positivos entre 1 e o parâmetro passado (inclusivo). Seu código deve imprimir um resultado por linha.
 
 #### Observações Importantes:
 

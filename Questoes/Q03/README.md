@@ -1,9 +1,8 @@
-Arquivo zip gerado em: 08/05/2022 16:57:59 
+# Exercício: Questão 03 - Lista Programação (Potencia)
+
+Arquivo zip gerado em: 08/05/2022 16:57:58 
 Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
 Para alterar um caso de teste acesse o sistema. 
-Exercício: Questão 04 - Lista Programação (Primo)
-
-
 
 
 
@@ -11,12 +10,12 @@ Seu código deve ler a seguinte entrada:
 
 ```
 1
-19
+2 3
 ```
 
-A primeira linha informa quantas linhas subsequentes devem ser processadas pelo seu programa. Nesse exemplo, o parâmetro da sua função está na linha seguinte: 19
+A primeira linha informa quantas linhas subsequentes devem ser processadas pelo seu programa. Nesse exemplo, os parâmetros da sua função estão na linha seguinte: 2 e 3.
 
-Sua função deve retornar "1" se a entrada for um número primo e "0" caso contrário.
+Em seguida, deverá realizar a seguinte operação "2 * 2 * 2" e retornar o resultado.
 
 #### Observações Importantes:
 
