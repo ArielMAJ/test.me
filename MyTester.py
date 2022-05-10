@@ -4,15 +4,20 @@ from glob import glob
 
 TEMP_FILE = 'output.txt'
 MAIN_PROGRAM = 'compiled_file.exe'
-FOLDER = '.\\Questoes\\'
+FOLDER = '.'
 C = {}
 
 def main():
 	platform_commands()
 	print("Platform: ", sys.platform)
+
+	global FOLDER
+	FOLDER += C['slash'] + 'Questoes' + C['slash']
+
 	test_results = []
 	if len(sys.argv) == 1:
-		subfolders = glob(FOLDER + "*/")
+		print(FOLDER + "*" + C['slash'])
+		subfolders = glob(FOLDER + "*" + C['slash'])
 		print("Folders to test:", *subfolders, sep='\n')
 		for subfolder in subfolders:
 			test_results += do_its_thing(subfolder)
@@ -25,12 +30,12 @@ def main():
 	sys.exit(0)
 
 def do_its_thing(folder):
-	print(folder.split("\\")[-2])
+	print(folder.split(C['slash'])[-2])
 	
 	
 	cmd = f'gcc -std=c99 \
 	-Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wlogical-op -Wredundant-decls -Wshadow \
-	-o {folder+MAIN_PROGRAM} {folder}solution.c'
+	-o {MAIN_PROGRAM} {folder}solution.c'
 	
 	compiled = not os.system(cmd)
 
@@ -41,7 +46,7 @@ def do_its_thing(folder):
 	tests = get_tests(folder)
 	run_tests(tests, folder)
 	
-	os.system(f"{C['rm']} {folder}{MAIN_PROGRAM}")
+	os.system(f"{C['rm']} {MAIN_PROGRAM}")
 	os.system(f"{C['rm']} {TEMP_FILE}")
 
 	return tests
@@ -50,10 +55,12 @@ def do_its_thing(folder):
 def platform_commands():
 	if 'win' in (pf := sys.platform.lower()):
 		C['rm'] = 'del'
+		C['slash'] = '\\'
 	else:
 		if "linux" not in pf:
 			print("Undefined behavior in this platform")
 		C['rm'] = 'rm'
+		C['slash'] = '/'
 
 
 def get_tests(folder):
