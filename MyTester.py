@@ -5,12 +5,15 @@ from glob import glob
 TEMP_FILE = 'output.txt'
 MAIN_PROGRAM = 'compiled_file.exe'
 FOLDER = '.\\Questoes\\'
+C = platform_commands()
 
 def main():
-	print("MyTest loaded.\nStarting tests...\n")
+	print("Platform: ", sys.platform)
 	test_results = []
 	if len(sys.argv) == 1:
-		for subfolder in (a := glob(FOLDER + "*/")):
+		subfolders = glob(FOLDER + "*/")
+		print("Folders to test:", *subfolders, sep='\n')
+		for subfolder in subfolders:
 			test_results += do_its_thing(subfolder)
 	else:
 		test_results += do_its_thing(sys.argv[1])
@@ -23,9 +26,8 @@ def main():
 def do_its_thing(folder):
 	print(folder.split("\\")[-2])
 	
-	c = platform_commands()
 	
-	cmd = f'gcc -std=c11 \
+	cmd = f'gcc -std=c99 \
 	-Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wlogical-op -Wredundant-decls -Wshadow \
 	-o {folder+MAIN_PROGRAM} {folder}solution.c'
 	
@@ -38,8 +40,8 @@ def do_its_thing(folder):
 	tests = get_tests(folder)
 	run_tests(tests, folder)
 	
-	os.system(f"{c['rm']} {folder}{MAIN_PROGRAM}")
-	os.system(f"{c['rm']} {TEMP_FILE}")
+	os.system(f"{C['rm']} {folder}{MAIN_PROGRAM}")
+	os.system(f"{C['rm']} {TEMP_FILE}")
 
 	return tests
 
