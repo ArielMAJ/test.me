@@ -102,7 +102,7 @@ def get_tests(folder):
 def run_tests(tests, folder):
 	for test_number, test in enumerate(tests):
 		# print(test)
-		cmd = f"{MAIN_PROGRAM} < {test['input_path']} > {TEMP_FILE}"
+		cmd = f".{C['slash']}{MAIN_PROGRAM} < {test['input_path']} > .{C['slash']}{TEMP_FILE}"
 		# print(cmd)
 		if os.system(cmd):
 			test['pass'] = False
