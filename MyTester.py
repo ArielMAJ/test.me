@@ -95,19 +95,19 @@ def get_tests(folder):
 		)
 
 	if not tests:
-		sys.exit("No valid tests to run.")
+		sys.exit("No valid tests to run in this folder.")
 
 	return tests
 
 def run_tests(tests, folder):
 	for test_number, test in enumerate(tests):
 		# print(test)
-		cmd = f"{folder}{MAIN_PROGRAM} < {test['input_path']} > {TEMP_FILE}"
+		cmd = f"{MAIN_PROGRAM} < {test['input_path']} > {TEMP_FILE}"
 		# print(cmd)
 		if os.system(cmd):
-			test['pass'] = True
-			with open(TEMP_FILE) as f:
-				test['actual'] = "Runtime error.\n" + f.read()
+			test['pass'] = False
+			with open(TEMP_FILE) as file:
+				test['actual'] = "Runtime error.\n" + file.read()
 			print(" TEST", test_number + 1,"DIDN'T PASS \n", test['actual'])
 			continue
 
