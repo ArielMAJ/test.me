@@ -5,9 +5,10 @@ from glob import glob
 TEMP_FILE = 'output.txt'
 MAIN_PROGRAM = 'compiled_file.exe'
 FOLDER = '.\\Questoes\\'
-C = platform_commands()
+C = {}
 
 def main():
+	platform_commands()
 	print("Platform: ", sys.platform)
 	test_results = []
 	if len(sys.argv) == 1:
@@ -48,13 +49,12 @@ def do_its_thing(folder):
 
 def platform_commands():
 	if 'win' in (pf := sys.platform.lower()):
-		c = {'rm': 'del'}
+		C['rm'] = 'del'
 	else:
 		if "linux" not in pf:
 			print("Undefined behavior in this platform")
-		c = {'rm': 'rm'}
+		C['rm'] = 'rm'
 
-	return c
 
 def get_tests(folder):
 	input_files = glob(folder + "*.in")
