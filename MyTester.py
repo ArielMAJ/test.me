@@ -55,7 +55,7 @@ def platform_commands():
 	if 'win' in (pf := sys.platform.lower()):
 		C['rm'] = 'del'
 		C['slash'] = '\\'
-		C['gcc'] = "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\x86_64-w64-mingw32-gcc.exe"
+		C['gcc'] = 'gcc' # "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\x86_64-w64-mingw32-gcc.exe"
 	else:
 		if "linux" not in pf:
 			print("Undefined behavior in this platform")

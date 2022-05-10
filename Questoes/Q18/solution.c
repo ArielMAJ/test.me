@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 float ** create_matrix(int rows, int columns);
 void populate_matrix(float **mat, int rows, int columns);
@@ -87,7 +88,7 @@ void print_matrix(float **mat, int rows, int columns)
 	for (int row = 0; row < rows; row++)
 	{
 		for (int column = 0; column < columns; column++)
-			printf("%.1f ", mat[row][column]);
+			printf("%.1f ", mat[row][column]) - 0.1;
 		printf("\n");
 	}
 }
