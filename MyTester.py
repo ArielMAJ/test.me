@@ -7,6 +7,7 @@ MAIN_PROGRAM = 'compiled_file.exe'
 FOLDER = '.\\Questoes\\'
 
 def main():
+	print("MyTest loaded.\nStarting tests...\n")
 	test_results = []
 	if len(sys.argv) == 1:
 		for subfolder in (a := glob(FOLDER + "*/")):
