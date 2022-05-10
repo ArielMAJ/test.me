@@ -7,12 +7,17 @@ MAIN_PROGRAM = 'compiled_file.exe'
 FOLDER = '.\\Questoes\\'
 
 def main():
+	test_results = []
 	if len(sys.argv) == 1:
-		for subfolder in glob(FOLDER + "*/"):
-			do_its_thing(subfolder)
+		for subfolder in (a := glob(FOLDER + "*/")):
+			test_results += do_its_thing(subfolder)
 	else:
-		do_its_thing(sys.argv[1])
+		test_results += do_its_thing(sys.argv[1])
 
+	for test in test_results:
+		if not test["pass"]:
+			sys.exit("Failed one or more tests.")
+	sys.exit(0)
 
 def do_its_thing(folder):
 	print(folder.split("\\")[-2])
@@ -35,10 +40,7 @@ def do_its_thing(folder):
 	os.system(f"{c['rm']} {folder}{MAIN_PROGRAM}")
 	os.system(f"{c['rm']} {TEMP_FILE}")
 
-	for test in tests:
-		if test["pass"] != "✅":
-			sys.exit("Failed one or more tests.")
-	sys.exit(0)
+	return tests
 
 
 def platform_commands():
@@ -67,7 +69,7 @@ def get_tests(folder):
 				'expected_path': output,
 				'expected': None,
 				'actual': None,
-				'pass': None # Possibilities: ❌✅
+				'pass': None # Possibilities: 
 				}
 			)
 
@@ -93,10 +95,10 @@ def run_tests(tests, folder):
 		cmd = f"{folder}{MAIN_PROGRAM} < {test['input_path']} > {TEMP_FILE}"
 		# print(cmd)
 		if os.system(cmd):
-			test['pass'] = "❌"
+			test['pass'] = True
 			with open(TEMP_FILE) as f:
 				test['actual'] = "Runtime error.\n" + f.read()
-			print("❌ TEST", test_number + 1,"DIDN'T PASS ❌\n", test['actual'])
+			print(" TEST", test_number + 1,"DIDN'T PASS \n", test['actual'])
 			continue
 
 		with open(test['expected_path']) as file:
@@ -112,12 +114,12 @@ def run_tests(tests, folder):
 
 		test['expected'] = '\n'.join(test['expected'])
 		test['actual'] = '\n'.join(test['actual'])
-		test['pass'] = "✅" if (correct := test['expected'] == test['actual']) else "❌"
+		test['pass'] = True if (correct := test['expected'] == test['actual']) else False
 
 		if correct:
-			print("✅ TEST", test_number + 1,"PASSED ✅")
+			print(" TEST", test_number + 1,"PASSED ")
 		else:
-			print("❌ TEST", test_number + 1,"DIDN'T PASS ❌")
+			print(" TEST", test_number + 1,"DIDN'T PASS ")
 			print("Expected:\n", test['expected'])
 			print("Actual:\n", test['actual'])
 
