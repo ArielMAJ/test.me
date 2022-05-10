@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int maior(int *vect, int length);
 
@@ -7,7 +8,8 @@ int main(void)
 	int lenght;
 	scanf("%d", &lenght);
 	
-	int vect[lenght];
+	// int vect[lenght];
+	int *vect = (int *) malloc (lenght * sizeof(int));
 
 	for (int i = 0; i < lenght; i++)
 		scanf("%d", &vect[i]);
