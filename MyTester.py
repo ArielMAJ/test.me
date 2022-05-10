@@ -9,16 +9,16 @@ C = {}
 
 def main():
 	platform_commands()
-	print("Platform: ", sys.platform)
+	# print("Platform: ", sys.platform)
 
 	global FOLDER
 	FOLDER += C['slash'] + 'Questoes' + C['slash']
 
 	test_results = []
 	if len(sys.argv) == 1:
-		print(FOLDER + "*" + C['slash'])
+		# print(FOLDER + "*" + C['slash'])
 		subfolders = glob(FOLDER + "*" + C['slash'])
-		print("Folders to test:", *subfolders, sep='\n')
+		# print("Folders to test:", *subfolders, sep='\n')
 		for subfolder in subfolders:
 			test_results += do_its_thing(subfolder)
 	else:
@@ -32,10 +32,9 @@ def main():
 def do_its_thing(folder):
 	print(folder.split(C['slash'])[-2])
 	
-	
-	cmd = f'gcc -std=c11 \
+	cmd = f"{C['gcc']} -std=c11 \
 	-Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wlogical-op -Wredundant-decls -Wshadow \
-	-o {MAIN_PROGRAM} {folder}solution.c'
+	-o {MAIN_PROGRAM} {folder}solution.c"
 	
 	compiled = not os.system(cmd)
 
@@ -56,12 +55,13 @@ def platform_commands():
 	if 'win' in (pf := sys.platform.lower()):
 		C['rm'] = 'del'
 		C['slash'] = '\\'
+		C['gcc'] = "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\x86_64-w64-mingw32-gcc.exe"
 	else:
 		if "linux" not in pf:
 			print("Undefined behavior in this platform")
 		C['rm'] = 'rm'
 		C['slash'] = '/'
-
+		C['gcc'] = 'gcc'
 
 def get_tests(folder):
 	input_files = glob(folder + "*.in")
