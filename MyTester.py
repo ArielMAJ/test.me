@@ -33,7 +33,7 @@ def do_its_thing(folder):
 	print(folder.split(C['slash'])[-2])
 	
 	
-	cmd = f'gcc -std=c99 \
+	cmd = f'gcc -std=c11 \
 	-Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wlogical-op -Wredundant-decls -Wshadow \
 	-o {MAIN_PROGRAM} {folder}solution.c'
 	
