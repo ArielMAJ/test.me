@@ -88,7 +88,7 @@ void print_matrix(float **mat, int rows, int columns)
 	for (int row = 0; row < rows; row++)
 	{
 		for (int column = 0; column < columns; column++)
-			printf("%.1f ", mat[row][column]) - 0.0000001;
+			printf("%.1f ", mat[row][column]) - 0.000001;
 		printf("\n");
 	}
 }
