@@ -20,30 +20,10 @@ jobs:
   unix_tests:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest, windows-2019, windows-latest]
     runs-on: ${{ matrix.os }}
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-    - name: Test with MyTester
-      run: |
-        python MyTester.py
-
-  windows_tests:
-    strategy:
-      matrix:
-        os: [windows-2019, windows-latest]
-    runs-on: ${{ matrix.os }}
-
-    steps:
-    - name: Set up MinGW
-      uses: egor-tensin/setup-mingw@v2
-      with:
-        platform: x64
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
