@@ -133,11 +133,8 @@ def run_tests(tests, folder):
 
         test["expected"] = "\n".join(test["expected"])
         test["actual"] = "\n".join(test["actual"])
-        test["pass"] = (
-            True if (correct := test["expected"] == test["actual"]) else False
-        )
-
-        if correct:
+        test["pass"] = test["expected"] == test["actual"]
+        if test["pass"]:
             print(" TEST", test_number + 1, "PASSED ")
         else:
             print(" TEST", test_number + 1, "DIDN'T PASS ")
