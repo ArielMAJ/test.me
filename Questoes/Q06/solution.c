@@ -9,10 +9,12 @@ int main(void)
 	
 	int n;
 
+	int result;
 	for (int i = 0; i < n_linhas; i++)
 	{
 		scanf("%d", &n);
-		printf("%d\n", inteiros(n));
+		result = inteiros(n);
+		printf("%d\n", result);
 	}
 
 	return 0;

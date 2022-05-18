@@ -10,7 +10,8 @@ int main(void)
 	int n;
 	scanf("%d", &n);
 
-	printf("%d\n", primo(n));
+	int result = primo(n);
+	printf("%d\n", result);
 	return 0;
 }
 

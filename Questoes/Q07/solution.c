@@ -9,12 +9,14 @@ int main(void)
 	
 	int n;
 
+	unsigned int result;
 	for (int i = 0; i < n_linhas; i++)
 	{
 		scanf("%d", &n);
 		for (int j = 0; j <= n; j++)
 		{
-			printf("%u", fib(j));
+			result = fib(j);
+			printf("%u", result);
 			if (j != n)
 				printf(" ");
 		}

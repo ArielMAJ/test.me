@@ -12,14 +12,15 @@ int main(void)
 	for (int i = 0; i < n_linhas; ++i)
 		scanf("%d", &lenght[i]);
 	
+	float result;
 	for (int i = 0; i < n_linhas; ++i)
 	{
 		float vect[lenght[i]];
 
 		for (int j = 0; j < lenght[i]; j++)
 			scanf("%f", &vect[j]);
-		
-		printf("%.1f\n", media(vect, lenght[i]));
+		result = media(vect, lenght[i]);
+		printf("%.1f\n", result);
 	}
 
 	return 0;

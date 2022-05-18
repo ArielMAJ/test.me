@@ -9,10 +9,12 @@ int main(void)
 	
 	int n;
 
+	int result;
 	for (int i = 0; i < n_linhas; i++)
 	{
 		scanf("%d", &n);
-		printf("%d\n", multiplos(n));
+		result = multiplos(n);
+		printf("%d\n", result);
 	}
 
 	return 0;

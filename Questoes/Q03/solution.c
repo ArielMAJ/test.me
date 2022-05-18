@@ -2,7 +2,7 @@
 
 int potencia_loop(int x, int p);
 
-int main(int argc, char const *argv[])
+int main(void)
 {
 	int n_linhas;
 	scanf("%d", &n_linhas);
@@ -10,7 +10,8 @@ int main(int argc, char const *argv[])
 	scanf("%d", &x);
 	scanf("%d", &y);
 
-	printf("%d\n", potencia_loop(x, y));
+	int resultado = potencia_loop(x, y);
+	printf("%d\n", resultado);
 	return 0;
 }
 

@@ -19,7 +19,8 @@ int main(void)
 		float **mat = create_matrix(rows, columns);
 		populate_matrix(mat, rows, columns);
 
-		printf("%.2f\n", mediamat(mat, rows, columns));
+		float result = mediamat(mat, rows, columns);
+		printf("%.2f\n", result);
 
 		free_matrix(mat, rows);
 	}

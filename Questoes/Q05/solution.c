@@ -9,10 +9,12 @@ int main(void)
 	
 	int n;
 
+	float result;
 	for (int i = 0; i < n_linhas; i++)
 	{
 		scanf("%d", &n);
-		printf("%.0f\n", fact(n));
+		result = fact(n);
+		printf("%.0f\n", result);
 	}
 
 	return 0;

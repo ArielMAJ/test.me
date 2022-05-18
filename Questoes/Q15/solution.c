@@ -13,7 +13,8 @@ int main(void)
 	float *vect1 = scan_vect(length1);
 	float *vect2 = scan_vect(length2);
 	if (vect1 == NULL || vect2 == NULL) return 1;
-	printf("%.1f\n", pertence(vect1, length1, vect2, length2));
+	float result = pertence(vect1, length1, vect2, length2);
+	printf("%.1f\n", result);
 
 	free(vect1);
 	free(vect2);

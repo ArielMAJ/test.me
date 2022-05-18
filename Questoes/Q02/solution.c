@@ -2,7 +2,7 @@
 
 int divide(int a, int b);
 
-int main(int argc, char const *argv[])
+int main(void)
 {
 	int n_linhas;
 	int num, den;
@@ -12,7 +12,8 @@ int main(int argc, char const *argv[])
 	scanf("%d", &num);
 	scanf("%d", &den);
 
-	printf("%d\n", divide(num, den));
+	int result = divide(num, den);
+	printf("%d\n", result);
 	
 	return 0;
 }
