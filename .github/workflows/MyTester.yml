@@ -34,6 +34,6 @@ jobs:
         python MyTester.py
     - name: Test with MyTester-v2.c
       run: |
-        gcc -std=c11 -Wall -o MyTester.exe MyTester-v2.c
+        gcc -std=c11 -D_BSD_SOURCE -Wall -o MyTester.exe MyTester-v2.c
         ./MyTester.exe solution.c ./ ./Questoes/
         
