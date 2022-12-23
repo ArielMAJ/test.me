@@ -1,4 +1,4 @@
-# Repository name ToBeDecided
+# MyTester
 
 MyTester is my own tool for testing my code.
 
