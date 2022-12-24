@@ -110,12 +110,22 @@ void iterate_tests(char *code_path, char *tests_path)
         char *expected_output = process_file(output_path);
 
         if (strstr(actual_output, expected_output))
+        {
             printf("    |- %s: PASSED\n", dir->d_name);
+        }
         else
         {
             printf("    |- %s: FAILED\n", dir->d_name);
-            printf("Expected:\n%s\n", expected_output);
-            printf("Actual:\n%s\n", actual_output);
+            printf("**********************************************************\n");
+            printf("Expected:\n");
+            printf("----------------------------------------------------------\n");
+            printf("%s", expected_output);
+            printf("----------------------------------------------------------\n");
+            printf("Actual:\n");
+            printf("----------------------------------------------------------\n");
+            printf("%s", actual_output);
+            printf("----------------------------------------------------------\n");
+            printf("**********************************************************\n");
         }
 
         free(actual_output);
