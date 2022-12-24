@@ -300,7 +300,7 @@ char *get_next_line(FILE *file)
     int contents_length = end_of_line - start_of_line;
 
     if (contents_length < 1)
-        contents_length = 0;
+        contents_length = 1;
 
     fseek(file, -contents_length, SEEK_CUR); // Go back to the begining of the line.
     char *contents = (char *) malloc(sizeof(char) * (contents_length + 1));
