@@ -39,6 +39,9 @@ int main(int argc, char *argv[])
         char *folders_path = argv[3];
         iterate_folders(code_path, tests_path, folders_path);
     }
+
+    system("del compiled_test_file.exe");
+    system("del output.txt");
     return (0);
 }
 
