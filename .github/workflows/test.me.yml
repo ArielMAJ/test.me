@@ -1,16 +1,16 @@
-name: MyTester
+name: test.me
 
 on:
   push:
 #     branches: [ main ]
     paths:
-      - '.github/workflows/MyTester.yml'
+      - '.github/workflows/test.me.yml'
       - 'Questoes/**'
       - 'MyTester*'
   pull_request:
 #     branches: [ main ]
     paths:
-      - '.github/workflows/MyTester.yml'
+      - '.github/workflows/test.me.yml'
       - 'Questoes/**'
       - 'MyTester*'
 permissions:
@@ -29,11 +29,11 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
-    - name: Test with MyTester.py
+    - name: Tests with MyTester.py
       run: |
         python MyTester.py
-    - name: Test with MyTester-v2.c
+    - name: Tests with MyTester-v2.c
       run: |
-        gcc -std=c11 -D_BSD_SOURCE -Wall -o MyTester.exe MyTester-v2.c
-        ./MyTester.exe solution.c ./ ./Questoes/
+        gcc -std=c11 -D_BSD_SOURCE -Wall -o test.me.exe MyTester-v2.c
+        ./test.me.exe solution.c ./ ./Questoes/
         
