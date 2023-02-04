@@ -1,5 +1,10 @@
 # test.me
 
+## Table of Contents
+- [About](#about)
+- [How to use](#how-to-use)
+- [Compatibility](#compatibility)
+
 ## About 
 
 As a software developer or even someone just starting out in the world of programming, you've probably faced the following challenges:
