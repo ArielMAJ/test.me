@@ -5,7 +5,7 @@ Este arquivo contém todos os casos de teste cadastrados até o momento, dispon�
 Para alterar um caso de teste acesse o sistema. 
 
 
-Seu código deve ler a seguinte entrada:
+Seu código deve ler o seguinte modelo de entrada:
 ```
 3
 2 3
@@ -21,13 +21,13 @@ Seu código deve ler a seguinte entrada:
 ```
 Seu código deve:
 1. **Criar** matrizes a partir da entrada;
-2. Implementar uma função ("ProdEsc") que recebe duas matrizes e retorna a matriz resultante do produto escalar de duas matrizes;
-3. Imprimir a matriz final após realizar o produto escalar de "n" matrizes em sequência (1 casa decimal).
+2. Implementar uma função ("ProdEsc") que recebe duas matrizes e retorna a matriz resultante do produto de duas matrizes;
+3. Imprimir a matriz final após realizar o produto de "n" matrizes em sequência (1 casa decimal).
 
 
-Nesse exemplo, "3" informa quantas matrizes serão lidas e multiplicadas em sequência. A linha seguinte informa as dimensões da matriz (2x3), seguida pela matriz. Todos os casos estarão dentro desse padrão. Considere que você sempre receberá uma sequência válida de matrizes para o cálculo do produto escalar.
+Nesse exemplo, "3" informa quantas matrizes serão lidas e multiplicadas em sequência. A linha seguinte informa as dimensões da matriz (2x3), seguida pela matriz. Todos os casos estarão dentro desse padrão. Considere que você sempre receberá uma sequência válida de matrizes para o cálculo do produto.
 
-Considerando as 3 matrizes A, B e C do exemplo acima, você deve fazer ((A@B)@C)  (aqui "@" representa o produto escalar).
+Considerando as 3 matrizes A, B e C do exemplo acima, você deve fazer ((A@B)@C)  (aqui "@" representa o produto).
 
 A@B:
 ```
