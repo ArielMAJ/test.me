@@ -4,6 +4,7 @@
 - [About](#about)
 - [How to use](#how-to-use)
 - [Compatibility](#compatibility)
+- [Translations](#translations)
 
 ## About 
 
@@ -26,3 +27,7 @@ TBA
 ## Compatibility
 
 - Windows, works and is the primary development platform.
+
+## Translations
+
+TBA
