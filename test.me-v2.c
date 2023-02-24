@@ -56,7 +56,7 @@ void iterate_tests(char *code_path, char *tests_path)
     // char *cmd = (char *) malloc (45 + strlen(code_path) + 1);
     char cmd[1000];
     cmd[0] = '\0';
-    strcat(cmd, "gcc -std=c99 -Wall -o compiled_test_file.exe ");
+    strcat(cmd, "gcc -std=c11 -Wall -Wextra -o compiled_test_file.exe -lm ");
     strcat(cmd, code_path);
     system(cmd);
     // free(cmd);
