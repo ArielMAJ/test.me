@@ -22,7 +22,16 @@ It is with these and other setbacks in mind that **test.me** was designed. As a 
 
 ## How to use 
 
-TBA
+1. Compile test.me.c.
+    - e.g. `gcc -O2 -std=c11 -Wall -Wextra -lm -o test.me.exe .\test.me-v2.c`
+2. Write your code and create tests for it (example inputs and expected outputs) as per [the examples in this repo](https://github.com/ArielMAJ/test.me/tree/main/example_input).
+    - Input and output for one single test should have the same naming except for the file extension (".in" for input, ".out" for output).
+3. Test your code.
+    - e.g. `.\test.me <Path to your C code> <Path to your example inputs and outputs>`
+    - e.g. `.\test.me .\example_input\Q03\solution.c .\example_input\Q03\tests\`
+4. If you have many solutions to different problems in a subfolder with the same naming structure, you can test it all with:
+    - e.g. `.\test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>`
+    - `.\test.me .\solution.c .\tests\ .\example_input\`
 
 ## Compatibility
 
