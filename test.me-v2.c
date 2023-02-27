@@ -40,8 +40,8 @@ int main(int argc, char *argv[])
         iterate_folders(code_path, tests_path, folders_path);
     }
 
-    system("del compiled_test_file.exe");
-    system("del output.txt");
+    system("rm ./compiled_test_file.exe");
+    system("rm ./output.txt");
     return (0);
 }
 
@@ -99,7 +99,7 @@ void iterate_tests(char *code_path, char *tests_path)
 
         // cmd = (char *) malloc (25 + strlen(input_path) + 3 + strlen(OUTPUT_FILE) + 2);
         cmd[0] = '\0';
-        strcat(cmd, "compiled_test_file.exe < ");
+        strcat(cmd, "./compiled_test_file.exe < ");
         strcat(cmd, input_path);
         strcat(cmd, " > ");
         strcat(cmd, OUTPUT_FILE);
