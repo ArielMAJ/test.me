@@ -35,7 +35,9 @@ It is with these and other setbacks in mind that **test.me** was designed. As a 
 
 ## Compatibility
 
-- Windows, works and is the primary development platform.
+- Windows: works and is the primary development platform;
+- Linux & WSL: working on it;
+- MacOS: will be worked on once linux support is added.
 
 ## Translations
 

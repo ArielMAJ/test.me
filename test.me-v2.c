@@ -13,15 +13,13 @@ int file_exists (char *file_path)
     return (stat (file_path, &buffer) == 0);
 }
 
-
-void iterate_tests(char *, char *);
-void iterate_folders(char *, char *, char *);
+int iterate_tests(char *, char *);
+int iterate_folders(char *, char *, char *);
 char *process_file(char *path);
 int right_check_unwated(FILE *file, char *to_skip);
 int left_check_unwated(FILE *file, char *to_skip);
 void f_close(FILE *file);
 char *get_next_line(FILE *file);
-
 
 char OUTPUT_FILE[] = "output.txt";
 long int LENGTH;
@@ -29,44 +27,57 @@ long int LENGTH;
 int main(int argc, char *argv[])
 {
     if (argc < 3 || argc > 4)
-        return 1;
+        return EXIT_FAILURE;
     char *code_path = argv[1];
     char *tests_path = argv[2];
+
+    int ERROR_CODE = EXIT_SUCCESS;
+
     if (argc == 3)
-        iterate_tests(code_path, tests_path);
+        ERROR_CODE += iterate_tests(code_path, tests_path);
     else
     {
         char *folders_path = argv[3];
-        iterate_folders(code_path, tests_path, folders_path);
+        ERROR_CODE += iterate_folders(code_path, tests_path, folders_path);
     }
 
-    system("del compiled_test_file.exe");
-    system("del output.txt");
-    return (0);
+#ifdef _WIN32
+    ERROR_CODE += system("del compiled_test_file.exe");
+    ERROR_CODE += system("del output.txt");
+#else
+    ERROR_CODE += system("rm ./compiled_test_file.exe");
+    ERROR_CODE += system("rm ./output.txt");
+#endif
+
+    return ERROR_CODE;
 }
 
-void iterate_tests(char *code_path, char *tests_path)
+int iterate_tests(char *code_path, char *tests_path)
 {
     if (!file_exists(code_path))
     {
         printf("%s not found\n", code_path);
-        return;
+        return EXIT_FAILURE;
     }
+
+    int ERROR_CODE = EXIT_SUCCESS;
 
     // char *cmd = (char *) malloc (45 + strlen(code_path) + 1);
     char cmd[1000];
     cmd[0] = '\0';
-    strcat(cmd, "gcc -std=c11 -Wall -Wextra -o compiled_test_file.exe -lm ");
+    strcat(cmd, "gcc -std=c11 -Wno-sign-compare -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wlogical-op -Wredundant-decls -Wno-unused-parameter -Wno-unused-variable -Wshadow -Wall -Wextra -Werror -o compiled_test_file.exe -lm ");
     strcat(cmd, code_path);
-    system(cmd);
+    ERROR_CODE += system(cmd);
     // free(cmd);
 
+    if (ERROR_CODE != EXIT_SUCCESS)
+        return ERROR_CODE;
 
     DIR *d = opendir(tests_path);
     if (!d)
     {
         printf("Failed accessing %s\n", tests_path);
-        return;
+        return ERROR_CODE + EXIT_FAILURE;
     }
 
     printf("___________________\n%s\n", tests_path);
@@ -75,7 +86,7 @@ void iterate_tests(char *code_path, char *tests_path)
     char output_path[250];
 
     struct dirent *dir;
-    while ((dir = readdir(d)) != NULL)
+    while ((dir = readdir(d)) != NULL && ERROR_CODE == EXIT_SUCCESS)
     {
         if (!((dir->d_type == DT_REG) && (strstr(dir->d_name, ".out") != NULL)))
             continue;
@@ -99,11 +110,16 @@ void iterate_tests(char *code_path, char *tests_path)
 
         // cmd = (char *) malloc (25 + strlen(input_path) + 3 + strlen(OUTPUT_FILE) + 2);
         cmd[0] = '\0';
+
+#ifdef _WIN32
         strcat(cmd, "compiled_test_file.exe < ");
+#else
+        strcat(cmd, "./compiled_test_file.exe < ");
+#endif
         strcat(cmd, input_path);
         strcat(cmd, " > ");
         strcat(cmd, OUTPUT_FILE);
-        system(cmd);
+        ERROR_CODE += system(cmd);
         // free(cmd);
 
         char *actual_output = process_file(OUTPUT_FILE);
@@ -134,10 +150,11 @@ void iterate_tests(char *code_path, char *tests_path)
     }
     closedir(d);
     printf("    |___________________\n");
+
+    return ERROR_CODE;
 }
 
-
-void iterate_folders(
+int iterate_folders(
     char *relative_CODE_path_in_each_folder,
     char *relative_TESTS_path_in_each_folder,
     char *folders_path
@@ -151,14 +168,15 @@ void iterate_folders(
     if (!d)
     {
         printf("Failed accessing %s\n", folders_path);
-        return;
+        return EXIT_FAILURE;
     }
     if (relative_TESTS_path_in_each_folder[0] == '.')
         relative_TESTS_path_in_each_folder++;
     if (relative_CODE_path_in_each_folder[0] == '.')
         relative_CODE_path_in_each_folder++;
 
-    while ((dir = readdir(d)) != NULL)
+    int ERROR_CODE = EXIT_SUCCESS;
+    while ((dir = readdir(d)) != NULL && ERROR_CODE == EXIT_SUCCESS)
     {
         if (!(dir->d_type == DT_DIR && !strchr(dir->d_name, '.')))
             continue;
@@ -174,14 +192,12 @@ void iterate_folders(
             strcat(code_path, "/");
         strcat(code_path, relative_CODE_path_in_each_folder);
 
-        iterate_tests(code_path, tests_path);
+        ERROR_CODE += iterate_tests(code_path, tests_path);
     }
     closedir(d);
 
+    return ERROR_CODE;
 }
-
-
-
 
 int right_check_unwated(FILE *file, char *to_skip)
 {
@@ -218,7 +234,10 @@ int left_check_unwated(FILE *file, char *to_skip)
     if (pos == LENGTH - 1)
     {
         fseek(file, -1, SEEK_CUR);
-        fread(&current_character, sizeof(char), 1, file);
+        {
+            int tmp = fread(&current_character, sizeof(char), 1, file);
+        }
+
         if (!strchr(" \r\n", current_character))
             pos = LENGTH;
     }
@@ -229,7 +248,10 @@ int left_check_unwated(FILE *file, char *to_skip)
         // As the "current character" was "already read", we have to go back
         // two steps to read the last character.
         fseek(file, -2, SEEK_CUR);
-        fread(&current_character, sizeof(char), 1, file); // Reading it.
+        {
+            int tmp = fread(&current_character, sizeof(char), 1, file); // Reading it.
+        }
+
         // while (current_character == '\r')
         // {
         //     fseek(file, -2, SEEK_CUR);
@@ -246,7 +268,6 @@ int left_check_unwated(FILE *file, char *to_skip)
     // printf("%d %d\n\n", LENGTH,end);
     return end;
 }
-
 
 void f_close(FILE *file)
 {
@@ -318,7 +339,10 @@ char *get_next_line(FILE *file)
     fseek(file, -contents_length, SEEK_CUR); // Go back to the begining of the line.
     char *contents = (char *) malloc(sizeof(char) * (contents_length + 1));
     // // printf("\nSOL: %d, EOL: %d, strlen=%d\n", start_of_line, end_of_line, contents_length);
-    fread(contents, sizeof(char), contents_length, file);
+    {
+        int tmp = fread(contents, sizeof(char), contents_length, file);
+    }
+
     contents[contents_length] = '\0';
 
     fseek(file, curr_pos - end_of_line, SEEK_CUR);
