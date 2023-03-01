@@ -5,14 +5,14 @@ on:
 #     branches: [ main ]
     paths:
       - '.github/workflows/test.me.yml'
-      - 'Questoes/**'
-      - 'MyTester*'
+      - 'example_input/**'
+      - 'test.me.c'
   pull_request:
 #     branches: [ main ]
     paths:
       - '.github/workflows/test.me.yml'
-      - 'Questoes/**'
-      - 'MyTester*'
+      - 'example_input/**'
+      - 'test.me.c'
 permissions:
   contents: read
 
@@ -25,15 +25,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-    - name: Tests with MyTester.py
+    - name: Testing test.me.c
       run: |
-        python MyTester.py
-    - name: Tests with MyTester-v2.c
-      run: |
-        gcc -std=c11 -D_BSD_SOURCE -Wall -o test.me.exe MyTester-v2.c
-        ./test.me.exe solution.c ./ ./Questoes/
+        make
+        ./test.me ./solution.c ./tests example_input/
         
