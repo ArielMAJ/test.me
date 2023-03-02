@@ -28,10 +28,10 @@ int main(void)
 
 float somadiagonal(float **mat, int rows, int columns)
 {
-	// if (rows != columns) {
-	// 	printf("Matriz não é quadrada.");
-	// 	return 0;
-	// }
+	if (rows != columns) {
+		printf("Matriz não é quadrada.");
+		return 0;
+	}
 
 	float sum = 0;
 	
