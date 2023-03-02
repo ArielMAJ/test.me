@@ -27,6 +27,6 @@ jobs:
     - uses: actions/checkout@v3
     - name: Testing test.me.c
       run: |
-        make
+        make;
         ./test.me ./solution.c ./tests example_input/
         
