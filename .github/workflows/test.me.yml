@@ -25,8 +25,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Testing test.me.c
-      run: |
-        make;
-        ./test.me ./solution.c ./tests example_input/
+    - name: Compile test.me.c
+      run: make; ls;
+      
+    - name: Run test.me with one file
+      run: ./test.me ./example_input/Q01/solution.c ./example_input/Q01/tests/
+      
+    - name: Run test.me with many subfolders.
+      run: ./test.me ./solution.c ./tests example_input/
         
