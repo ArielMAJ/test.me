@@ -65,7 +65,7 @@ int iterate_tests(char *code_path, char *tests_path)
     // char *cmd = (char *) malloc (45 + strlen(code_path) + 1);
     char cmd[1000];
     cmd[0] = '\0';
-    strcat(cmd, "gcc -std=c11 -Wno-sign-compare -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wlogical-op -Wredundant-decls -Wno-unused-parameter -Wno-unused-variable -Wshadow -Wall -Wextra -Werror -o compiled_test_file.exe -lm ");
+    strcat(cmd, "gcc -std=c11 -Wno-sign-compare -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wredundant-decls -Wno-unused-parameter -Wno-unused-variable -Wshadow -Wall -Wextra -Werror -o compiled_test_file.exe -lm ");
     strcat(cmd, code_path);
     ERROR_CODE += system(cmd);
     // free(cmd);
