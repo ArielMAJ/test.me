@@ -1,9 +1,9 @@
-# Exercício: Questão 09 - Lista Programação (Maior)
+# Questão 09 - Maior
 
-Arquivo zip gerado em: 08/05/2022 16:58:04 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada maior que recebe um vetor e retorna o maior valor
+dentre os elementos do vetor.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 

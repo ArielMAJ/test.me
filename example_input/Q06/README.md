@@ -1,9 +1,9 @@
-# Exercício: Questão 06 - Lista Programação (Inteiros)
+# Questão 06 - Inteiros
 
-Arquivo zip gerado em: 08/05/2022 16:58:01 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada inteiros que recebe um número inteiro positivo x e
+retorne a soma de todos os inteiros positivos entre 1 e x.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 ```

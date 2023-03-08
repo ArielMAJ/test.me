@@ -1,9 +1,8 @@
-# Exercício: Questão 11 - Lista Programação (Media)
+# Questão 11 - Media
 
-Arquivo zip gerado em: 08/05/2022 17:08:16 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada media que recebe um vetor e retorna sua média.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 
@@ -18,7 +17,6 @@ O primeiro valor da primeira linha informa quantas linhas devem ser lidas. Os va
 Nesse exemplo, "2 5 3" informa que seu programa deve ler 2 linhas: na primeira há um vetor de tamanho 5, na segunda há um vetor de tamanho 3.
 
 Sua função deve receber um vetor e retornar a média dos elementos encontrados nele. Seu programa deve imprimir a média de cada vetor (limitado a uma casa decimal). Cada valor deve estar em uma nova linha.
-
 
 #### Observações Importantes:
 

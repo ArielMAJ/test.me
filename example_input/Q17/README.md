@@ -1,9 +1,9 @@
-# Exercício: Questão 17 - Lista Programação (MediaMat)
+# Questão 17 - MediaMat
 
-Arquivo zip gerado em: 08/05/2022 16:58:11 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada media que recebe um vetor e retorna sua
+média.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 ```
@@ -29,7 +29,6 @@ Nesse exemplo, "2" informa quantas matrizes serão lidas. A linha seguinte infor
   1. Se decidir alocar memória para as matrizes, lembre-se de liberar essa memória também;
   2. Se você alocar memória dentro de um loop e reutilizar uma mesma variável para novas alocações, lembre-se de liberar essa memória no fim do loop antes de novas alocações também;
 </details>
-
 
 #### Observações Importantes:
 

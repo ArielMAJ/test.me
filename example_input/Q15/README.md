@@ -1,9 +1,9 @@
-# Exercício: Questão 15 - Lista Programação (Pertence)
+# Questão 15 - Pertence
 
-Arquivo zip gerado em: 08/05/2022 16:58:09 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada pertence que recebe dois vetores e retorna a
+soma dos elementos que fazem parte dos dois conjuntos (vetores).
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 ```
@@ -18,19 +18,15 @@ Seu código deve:
 
 Nesse exemplo, "3 4" informa o tamanho de cada vetor.
 
-
 <details> <summary>Dica 01 (clicar para ler)</summary>- Teoria dos Conjuntos.</details>
 <details> <summary>Dica 02 (clicar para ler)</summary>- Você deve somar os elementos em "A ∩ B".</details>
 <details> <summary>Dica 03 (clicar para ler)</summary>- Na teoria dos conjuntos {1, 2, 3}, {3, 2, 1} e {1, 1, 2, 2, 3, 3} são conjuntos iguais.</details>
 <details> <summary>Dica 04 (clicar para ler)</summary>- Dado A={1, 1, 1, 1, 1, 2, 2}, B = {1, 3, 2, 2, 2, 2, 1}: A ∩ B = {1, 2}</details>
 
-
 <details>
   <summary>Recomendações  (clicar para ler)</summary>
   1. Se decidir alocar memória para os vetores, lembre-se de liberar essa memória também;
 </details>
-
-
 
 #### Observações Importantes:
 

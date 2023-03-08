@@ -1,4 +1,9 @@
-# Exercício: Questão 01 - Lista Programação (Multiplica)
+# Questão 01 - Multiplica
+
+Escreva uma função chamada multiplica que faça multiplicação de dois números
+inteiros utilizando somas.
+
+<hr>
 
 Seu código deve ler a seguinte entrada:
 

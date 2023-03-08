@@ -1,9 +1,8 @@
-# Exercício: Questão 18 - Lista Programação (MultiMat)
+# Questão 18 - MultiMat
 
-Arquivo zip gerado em: 08/05/2022 16:58:13 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada multimat que multiplica duas matrizes.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 ```
@@ -34,7 +33,6 @@ Nesse exemplo, "3" informa quantas matrizes serão lidas e multiplicadas em sequ
   1. Se decidir alocar memória para as matrizes, lembre-se de liberar essa memória também;
   2. Se você alocar memória dentro de um loop e reutilizar uma mesma variável para novas alocações, lembre-se de liberar essa memória no fim do loop antes de novas alocações também;
 </details>
-
 
 #### Observações Importantes:
 

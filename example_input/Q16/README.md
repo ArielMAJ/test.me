@@ -1,9 +1,9 @@
-# Exercício: Questão 16 - Lista Programação (SomaAcumulativa)
+# Questão 16 - SomaAcumulativa
 
-Arquivo zip gerado em: 08/05/2022 16:58:10 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada somaacumulativa que recebe um vetor e
+retorna um outro vetor resultante de uma soma acumulativa.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 ```
@@ -18,14 +18,11 @@ Seu código deve:
 
 Nesse exemplo, "2 4 5" informa que haverá "n=2" vetores tamanho "l1=4" e "l2=5" para serem lidos nessa sequência.
 
-
 <details>
   <summary>Recomendações  (clicar para ler)</summary>
   1. Se decidir alocar memória para os vetores, lembre-se de liberar essa memória também;
   2. Se você alocar memória dentro de um loop e reutilizar uma mesma variável para novas alocações, lembre-se de liberar essa memória no fim do loop antes de novas alocações também;
 </details>
-
-
 
 #### Observações Importantes:
 

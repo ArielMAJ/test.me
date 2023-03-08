@@ -1,9 +1,9 @@
-# Exercício: Questão 04 - Lista Programação (Primo)
+# Questão 04 - Primo
 
-Arquivo zip gerado em: 08/05/2022 16:57:59 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada primo que recebe um número inteiro e retorne 1, se
+primo, ou 0, caso contrário.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 

@@ -1,9 +1,9 @@
-# Exercício: Questão 13 - Lista Programação (SomaColuna)
+# Questão 13 - SomaColuna
 
-Arquivo zip gerado em: 08/05/2022 16:58:08 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada somacoluna que recebe uma matriz, calcula sua
+transposta e soma os elementos da primeira coluna.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 
@@ -21,7 +21,6 @@ Seu código deve:
 
 Nesse exemplo, "2 4" informa o tamanho da matriz ("2x4"): o primeiro valor é a quantidade de linhas e o segundo é a quantidade de colunas. 
 
-
 <details>
   <summary>Recomendações  (clicar para ler)</summary>
   1. Se decidir alocar memória para as matrizes, lembre-se de liberar essa memória também;
@@ -29,8 +28,6 @@ Nesse exemplo, "2 4" informa o tamanho da matriz ("2x4"): o primeiro valor é a 
 </details>
 
 <details> <summary>Dica 01 (clicar para ler)</summary>Utilize uma matriz auxiliar (lembre-se de liberar o espaço alocado de ambas matrizes nesse caso).</details>
-
-
 
 #### Observações Importantes:
 

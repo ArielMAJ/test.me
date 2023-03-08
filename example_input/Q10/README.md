@@ -1,9 +1,9 @@
-#Exercício: Questão 10 - Lista Programação (Menor)
+# Questão 10 - Menor
 
-Arquivo zip gerado em: 08/05/2022 16:58:06 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada menor que recebe um vetor e retorna o maior
+valor dentre os elementos do vetor.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 

@@ -1,9 +1,4 @@
-# Exercício: Questão 14v2 - Lista Programação (DetOrd2)
-
-Arquivo zip gerado em: 08/05/2022 16:58:09 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
-
+# Questão 14v2 - DetOrd2
 
 Seu código deve ler a seguinte entrada:
 
@@ -16,13 +11,10 @@ Seu código deve:
 2. Calcular o determinante dessa matriz (ordem 2) com uma função ("DetOrd2"); e
 3. Imprimir o resultado desse cálculo (1 casa decimal).
 
-
 <details>
   <summary>Recomendações  (clicar para ler)</summary>
   1. Se decidir alocar memória para as matrizes, lembre-se de liberar essa memória também;
 </details>
-
-
 
 #### Observações Importantes:
 

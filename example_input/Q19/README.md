@@ -1,9 +1,12 @@
-# Exercício: Questão 19 - Lista Programação (ProdEsc)
+# Questão 19 - ProdEsc
 
-Arquivo zip gerado em: 08/05/2022 16:58:12 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Crie uma função chamada prodesc que calcula o produto escalar entre as
+duas matrizes e, usando as duas matrizes A e B definidas na questão anterior,
+imprima o resultado. O produto escalar é encontrado usando a seguinte fórmula:
 
+$$\sum_{i=1}^na_ib_i$$
+
+<hr>
 
 Seu código deve ler o seguinte modelo de entrada:
 ```
@@ -45,7 +48,6 @@ A@B:
   1. Se decidir alocar memória para as matrizes, lembre-se de liberar essa memória também;
   2. Se você alocar memória dentro de um loop e reutilizar uma mesma variável para novas alocações, lembre-se de liberar essa memória no fim do loop antes de novas alocações também;
 </details>
-
 
 #### Observações Importantes:
 

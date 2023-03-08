@@ -1,9 +1,10 @@
-# Exercício: Questão 08 - Lista Programação (Multiplos)
+# Questão 08 - Multiplos
 
-Arquivo zip gerado em: 08/05/2022 16:58:03 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Se listarmos todos os números naturais abaixo de 10 que são múltiplos de 3 ou 5,
+temos 3, 5, 6, 9, cuja soma é 23. Escreva uma função chamada multiplos que recebe
+um número y e retorna a soma de todos os múltiplos de 3 e 5 abaixo desse número y.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 

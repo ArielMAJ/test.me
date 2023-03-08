@@ -1,9 +1,9 @@
-# Exercício: Questão 07 - Lista Programação (Fibonacci)
+# Questão 07 - Fibonacci
 
-Arquivo zip gerado em: 08/05/2022 16:58:02 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada fibonacci que receba um número e retorne a soma
+da sua sequência de Fibonacci.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 ```
@@ -22,14 +22,12 @@ Tente fazer sem as dicas primeiro.
 
 - <details><summary>Dica 01 (clicar)</summary> Mais simples por vezes pode ser melhor. </details>
 
-
 - <details>
   <summary>Dica 02  (clicar)</summary>
   ```
   unsigned int
    ```
 </details>
-
 
 #### Observações Importantes:
 

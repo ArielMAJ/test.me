@@ -1,9 +1,9 @@
-# Exercício: Questão 14 - Lista Programação (SomaDiagonal)
+# Questão 14 - SomaDiagonal
 
-Arquivo zip gerado em: 08/05/2022 16:58:12 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada somadiagonal que recebe uma matriz e calcula
+a soma dos elementos que estão na diagonal principal.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 
@@ -20,14 +20,11 @@ Seu código deve:
 
 Nesse exemplo, "3 3" informa o tamanho da matriz ("3x3"): o primeiro valor é a quantidade de linhas e o segundo é a quantidade de colunas. 
 
-
 <details>
   <summary>Recomendações  (clicar para ler)</summary>
   1. Se decidir alocar memória para as matrizes, lembre-se de liberar essa memória também;
   2. Talvez seja interessante escrever funções para **criar**/**liberar**/**imprimir** matrizes (para re-uso nas próximas questões);
 </details>
-
-
 
 #### Observações Importantes:
 

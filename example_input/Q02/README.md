@@ -1,8 +1,9 @@
-# Exercício: Questão 02 - Lista Programação (Divide)
-Arquivo zip gerado em: 08/05/2022 16:57:56 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+# Questão 02 - Divide
 
+Escreva uma função chamada divide que faça divisão de dois números inteiros
+utilizando subtrações.
+
+<hr>
 
 Seu código deve ler a seguinte entrada:
 
@@ -13,7 +14,7 @@ Seu código deve ler a seguinte entrada:
 
 A primeira linha informa quantas linhas subsequentes devem ser processadas pelo seu programa. Nesse exemplo, os parâmetros da sua função estão na linha seguinte: 12 e 4.
 
-Em seguida, deverá realizar a seguinte operação "12 - 4 = 8 - 4 = 4 - 4 = 0" contando o total de operações (subtrações) realizadas. 
+Em seguida, deverá realizar a seguinte operação "12 - 4 = 8 - 4 = 4 - 4 = 0" contando o total de operações (subtrações) realizadas.
 
 Por fim, ele deve retornar o resultado **correto** da divisão de inteiros (_truncando valores após a vírgula_).
 

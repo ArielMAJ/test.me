@@ -1,9 +1,9 @@
-# Exercício: Questão 05 - Lista Programação (Fatorial)
+# Questão 05 - Fatorial
 
-Arquivo zip gerado em: 08/05/2022 16:58:00 
-Este arquivo contém todos os casos de teste cadastrados até o momento, disponível apenas para professores/monitores. 
-Para alterar um caso de teste acesse o sistema. 
+Escreva uma função chamada fatorial que recebe um número e retorne seu
+fatorial.
 
+<hr>
 
 Seu código deve ler a seguinte entrada:
 
@@ -22,7 +22,6 @@ Tente fazer sem as dicas primeiro.
 
 - <details><summary>Dica 01 (clicar)</summary>Inteiros costumam ter 4 bytes (4*8 = 32 bits) de espaço. Isso significa que podem representar até 2^32 valores (divido em metade para positivos e metade para negativos).</details>
 - <details><summary>Dica 02 (clicar)</summary>Que tal pesquisar tipos que consigam representar "13!" ?</details>
-
 
 #### Observações Importantes:
 
