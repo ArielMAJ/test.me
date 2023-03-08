@@ -1,18 +1,22 @@
 name: test.me
 
 on:
-#   push:
-#     branches: [ main ]
-#     paths:
-#       - '.github/workflows/test.me.yml'
-#       - 'example_input/**'
-#       - 'test.me.c'
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/test.me.yml'
+      - 'example_input/**'
+      - 'Makefile'
+      - 'test.me.c'
+       
   pull_request:
 #     branches: [ main ]
     paths:
       - '.github/workflows/test.me.yml'
       - 'example_input/**'
+      - 'Makefile'
       - 'test.me.c'
+      
 permissions:
   contents: read
 
@@ -26,11 +30,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Compile test.me.c
-      run: make; ls;
+      run: make;
       
-    - name: Run test.me with one file
+    - name: Run test.me with one folder.
       run: ./test.me ./example_input/Q01/solution.c ./example_input/Q01/tests/
       
     - name: Run test.me with many subfolders.
-      run: ./test.me ./solution.c ./tests example_input/
+      run: ./test.me ./solution.c ./tests/ ./example_input/
         
