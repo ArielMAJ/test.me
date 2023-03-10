@@ -23,7 +23,8 @@ It is with these and other setbacks in mind that **test.me** was designed. As a 
 ## How to use 
 
 1. Compile test.me.c.
-    - e.g. `gcc -O2 -std=c11 -Wall -Wextra -lm -o test.me.exe .\test.me-v2.c`
+    - e.g. `gcc -Wall -Wextra -o test.me .\test.me.c`; or
+    - e.g. `make`.
 2. Write your code and create tests for it (example inputs and expected outputs) as per [the examples in this repo](https://github.com/ArielMAJ/test.me/tree/main/example_input).
     - Input and output for one single test should have the same naming except for the file extension (".in" for input, ".out" for output).
 3. Test your code.
@@ -33,11 +34,15 @@ It is with these and other setbacks in mind that **test.me** was designed. As a 
     - e.g. `.\test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>`
     - `.\test.me .\solution.c .\tests\ .\example_input\`
 
+PS.: For now, folder names must end with a slash.
+
 ## Compatibility
 
 - Windows: works and is the primary development platform;
-- Linux & WSL: working on it;
-- MacOS: will be worked on once linux support is added.
+- Linux & WSL: should work;
+- MacOS: should work, still needs testing.
+
+Any and everyone is welcome to test this tool locally and leave feedback at [#78](https://github.com/ArielMAJ/test.me/discussions/78). If you have some free time and are interested in it, please do.
 
 ## Translations
 
