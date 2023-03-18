@@ -54,7 +54,7 @@ make
 #### Prepare enviroment
 
 1. [Download and install git](https://git-scm.com/download/win);
-2. [Download and install gcc](https://sourceforge.net/projects/mingw/)
+2. [Download and install gcc](https://sourceforge.net/projects/mingw/).
 
 #### Download this repo
 
@@ -68,7 +68,7 @@ cd test.me/
 
 #### Compile test.me.c
 
-Run the compiling command in [Makefile](./Makefile), or run
+Run the compiling command in [Makefile](./Makefile), or run:
 ```
 gcc -Wall -Wextra -o test.me .\test.me.c
 ```
