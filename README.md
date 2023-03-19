@@ -21,19 +21,88 @@ Hitches like these can make things a little more difficult than they need to be 
 
 It is with these and other setbacks in mind that **test.me** was designed. As a way to optimize what is really important: YOUR TIME.
 
-## How to use 
+## How to use
 
-1. Compile test.me.c.
-    - e.g. `gcc -Wall -Wextra -o test.me .\test.me.c`; or
-    - e.g. `make`.
-2. Write your code and create tests for it (example inputs and expected outputs) as per [the examples in this repo](https://github.com/ArielMAJ/test.me/tree/main/example_input).
-    - Input and output for one single test should have the same naming except for the file extension (".in" for input, ".out" for output).
-3. Test your code.
-    - e.g. `.\test.me <Path to your C code> <Path to your example inputs and outputs>`
-    - e.g. `.\test.me .\example_input\Q03\solution.c .\example_input\Q03\tests\`
-4. If you have many solutions to different problems in a subfolder with the same naming structure, you can test it all with:
-    - e.g. `.\test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>`
-    - `.\test.me .\solution.c .\tests\ .\example_input\`
+### Linux
+
+#### Prepare enviroment
+
+`Ctrl+Alt+T` to open Terminal.
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install git
+sudo apt install make
+sudo apt install gcc
+```
+
+#### Download this repo
+
+```
+git clone https://github.com/ArielMAJ/test.me.git
+cd test.me/
+```
+
+#### Compile test.me.c
+
+```
+make
+```
+
+### Windows
+
+#### Prepare enviroment
+
+1. [Download and install git](https://git-scm.com/download/win);
+2. [Download and install gcc](https://sourceforge.net/projects/mingw/).
+
+#### Download this repo
+
+Press `Windows+X` then press `I` to open Terminal.
+
+Then write:
+```
+git clone https://github.com/ArielMAJ/test.me.git
+cd test.me/
+```
+
+#### Compile test.me.c
+
+Run the compiling command in [Makefile](./Makefile), or run:
+```
+gcc -Wall -Wextra -o test.me .\test.me.c
+```
+
+### MacOS
+
+TBA
+
+### Then
+
+#### Write your code and create tests for it
+
+Write example inputs and expected outputs as per [the examples in this repo](./example_input/).
+ 
+PS: Input and output for one single test should have the same naming except for the file extension (".in" for input, ".out" for output).
+
+#### Test your code
+
+```
+.\test.me <Path to your C code> <Path to your example inputs and outputs>
+```
+e.g:
+```
+.\test.me .\example_input\Q03\solution.c .\example_input\Q03\tests\
+```
+
+or, if you have many solutions to different problems in a subfolder with the same naming structure, you can test it all with:
+```
+.\test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>
+```
+e.g:
+```
+.\test.me .\solution.c .\tests\ .\example_input\
+```
 
 PS.: For now, folder names must end with a slash.
 
