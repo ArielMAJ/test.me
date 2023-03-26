@@ -3,6 +3,10 @@
 ## Table of Contents
 
 - [About](#about)
+- [How to prepare your enviroment](#how-to-prepare-your-enviroment)
+    - [Linux](#linux)
+    - [Windows](#windows)
+    - [MacOS](#macos)
 - [How to use](#how-to-use)
 - [Compatibility](#compatibility)
 - [Translations](#translations)
@@ -21,11 +25,11 @@ Hitches like these can make things a little more difficult than they need to be 
 
 It is with these and other setbacks in mind that **test.me** was designed. As a way to optimize what is really important: YOUR TIME.
 
-## How to use
+## How to prepare your enviroment 
 
 ### Linux
 
-#### Prepare enviroment
+#### Install git, gcc and make
 
 `Ctrl+Alt+T` to open Terminal.
 ```
@@ -51,7 +55,7 @@ make
 
 ### Windows
 
-#### Prepare enviroment
+#### Install git and gcc
 
 1. [Download and install git](https://git-scm.com/download/win);
 2. [Download and install gcc](https://sourceforge.net/projects/mingw/).
@@ -77,15 +81,15 @@ gcc -Wall -Wextra -o test.me .\test.me.c
 
 TBA
 
-### Then
+## How to use
 
-#### Write your code and create tests for it
+### Write your code and create tests for it
 
 Write example inputs and expected outputs as per [the examples in this repo](./example_input/).
  
 PS: Input and output for one single test should have the same naming except for the file extension (".in" for input, ".out" for output).
 
-#### Test your code
+### Test your code
 
 ```
 .\test.me <Path to your C code> <Path to your example inputs and outputs>
