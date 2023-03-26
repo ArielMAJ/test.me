@@ -6,7 +6,7 @@
 - [How to prepare your enviroment](#how-to-prepare-your-enviroment)
     - [Linux](#linux)
     - [Windows](#windows)
-    - [MacOs](#macos)
+    - [MacOS](#macos)
 - [How to use](#how-to-use)
 - [Compatibility](#compatibility)
 - [Translations](#translations)
