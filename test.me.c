@@ -48,7 +48,11 @@ int main(int argc, char *argv[])
     }
 
     char *code_path = argv[1];
-    char *tests_path = argv[2];
+    char tests_path[strlen(argv[2]) + 2];
+    tests_path[0] = '\0';
+    strcat(tests_path, argv[2]);
+    if (tests_path[strlen(tests_path) - 1] != '/' && tests_path[strlen(tests_path) - 1] != '\\' )
+        strcat(tests_path, "/");
 
     int ERROR_CODE = EXIT_SUCCESS;
 
@@ -56,7 +60,12 @@ int main(int argc, char *argv[])
         ERROR_CODE += iterate_tests(code_path, tests_path);
     else
     {
-        char *folders_path = argv[3];
+        char folders_path[strlen(argv[3]) + 2];
+        folders_path[0] = '\0';
+        strcat(folders_path, argv[3]);
+        if (folders_path[strlen(folders_path) - 1] != '/' && folders_path[strlen(folders_path) - 1] != '\\' )
+            strcat(folders_path, "/");
+
         ERROR_CODE += iterate_folders(code_path, tests_path, folders_path);
     }
 
