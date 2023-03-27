@@ -27,7 +27,26 @@ long int LENGTH;
 int main(int argc, char *argv[])
 {
     if (argc < 3 || argc > 4)
+    {
+        printf("\x1B[31m_________________________________________________");
+        printf("__________________________________________________\e[0m\n");
+        printf("\e[1m\e[4m\e[31mERROR\e[0m: Invalid number of arguments\n\n");
+
+        printf("\x1B[32mUsage \e[3m\e[1msingle folder\e[0m:\e[0m ");
+        printf("./test.me \x1B[32m<\e[0mcode_path\x1B[32m>\e[0m \x1B[32m<\e[0mtest_folder_path\x1B[32m>\e[0m\e[0m\n");
+        printf("Example: ./test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/\n");
+
+        printf("\n\x1B[32mUsage \e[3m\e[1mmultiple folders\e[0m:\e[0m ");
+        printf("./test.me \x1B[32m<\e[0mcode_standard_name\x1B[32m>\e[0m \x1B[32m<\e[0mtest_folder_standard_name\x1B[32m>\e[0m \x1B[32m[\e[0mfolders_path\x1B[32m]\e[0m\e[0m\n");
+        printf("Example: ./test.me ./solution.c ./tests/ ./example_input/\n");
+
+        
+        printf("\x1B[31m_________________________________________________");
+        printf("__________________________________________________\e[0m\n");
+        
         return EXIT_FAILURE;
+    }
+
     char *code_path = argv[1];
     char *tests_path = argv[2];
 
