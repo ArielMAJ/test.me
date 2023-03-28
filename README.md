@@ -72,9 +72,9 @@ cd test.me/
 
 #### Compile test.me.c
 
-Run the compiling command in [Makefile](./Makefile), or run:
+Run the compiling command in [Makefile](./Makefile) (change *test.me* to **test.me.exe**), or run:
 ```
-gcc -Wall -Wextra -o test.me .\test.me.c
+gcc -Wall -Wextra -o test.me.exe ./test.me.c
 ```
 
 ### MacOS
@@ -92,20 +92,20 @@ PS: Input and output for one single test should have the same naming except for 
 ### Test your code
 
 ```
-.\test.me <Path to your C code> <Path to your example inputs and outputs>
+./test.me <Path to your C code> <Path to your example inputs and outputs>
 ```
 e.g:
 ```
-.\test.me .\example_input\Q03\solution.c .\example_input\Q03\tests\
+./test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
 ```
 
 or, if you have many solutions to different problems in a subfolder with the same naming structure, you can test it all with:
 ```
-.\test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>
+./test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>
 ```
 e.g:
 ```
-.\test.me .\solution.c .\tests\ .\example_input\
+./test.me ./solution.c ./tests/ ./example_input/
 ```
 
 PS.: For now, folder names must end with a slash.
