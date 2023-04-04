@@ -108,13 +108,11 @@ e.g:
 ./test.me ./solution.c ./tests/ ./example_input/
 ```
 
-PS.: For now, folder names must end with a slash.
-
 ## Compatibility
 
 - Windows: works and is the primary development platform;
-- Linux & WSL: should work;
-- MacOS: should work, still needs testing.
+- Linux & WSL: works and is sporadically tested;
+- MacOS: should work, still needs testers.
 
 Any and everyone is welcome to test this tool locally and leave feedback at [#78](https://github.com/ArielMAJ/test.me/discussions/78). If you have some free time and are interested in it, please do.
 
