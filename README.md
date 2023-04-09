@@ -10,6 +10,9 @@
 - [How to use](#how-to-use)
 - [Compatibility](#compatibility)
 - [Translations](#translations)
+- [License](#license)
+- [Authors, contributors and acknowledgements](#authors-contributors-and-acknowledgements)
+
 
 ## About 
 
@@ -119,3 +122,17 @@ Any and everyone is welcome to test this tool locally and leave feedback at [#78
 ## Translations
 
 TBA
+
+## License
+
+Distributed under the Apache 2.0 License. See [LICENSE](./LICENSE) for more information.
+
+## Authors, contributors and acknowledgements
+
+- [@ArielMAJ](https://github.com/ArielMAJ): ariel.maj@hotmail.com
+    - Original idea and development;
+- [@tauanesales](https://github.com/tauanesales): taysales6@gmail.com
+    - General improvements;
+    - Feedback and ideas;
+
+[Back to top](#table-of-contents)
