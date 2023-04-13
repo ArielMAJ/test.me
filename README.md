@@ -3,6 +3,10 @@
 ## Table of Contents
 
 - [About](#about)
+    - [What is *test.me*?](#what-is-testme)
+    - [What does *test.me* do?](#what-does-testme-do)
+    - [What are the benefits of using *test.me*?](#what-are-the-benefits-of-using-testme)
+    - [Why C?](#why-c)
 - [How to prepare your enviroment](#how-to-prepare-your-enviroment)
     - [Linux](#linux)
     - [Windows](#windows)
@@ -14,19 +18,44 @@
 - [Authors, contributors and acknowledgements](#authors-contributors-and-acknowledgements)
 
 
-## About 
+## About
+
+### What is *test.me*?
 
 As a software developer or even someone just starting out in the world of programming, you've probably faced the following challenges:
 
 1. Your code runs locally, but doesn't work in a specific auto-grading tool: the famous "but it works on my machine";
 
-2. You have test cases with (what looks like) infinite input characters;
+2. Having to manually copy and paste the input for each test case and manually check if the output is correct;
 
-3. In an online test, having to submit a file several times to test if your solution is passing on all test cases.
+3. You have test cases with (what looks like) infinite input characters;
 
-Hitches like these can make things a little more difficult than they need to be and take the focus away from what really matters at the moment: YOUR CODE.
+4. In an online test, having to submit a file several times to test if your solution is passing on all test cases.
 
-It is with these and other setbacks in mind that **test.me** was designed. As a way to optimize what is really important: YOUR TIME.
+These are just some of the problems that can arise when you are developing a solution for a problem. Hitches like these can make things a little more difficult than they need to be and take the focus away from what really matters at the moment: YOUR CODE.
+
+It is with these and other setbacks in mind that *test.me* was designed. As a way to optimize what is really important: YOUR TIME.
+
+### What does *test.me* do?
+
+*test.me* is a tool that automates the process of testing your code. It takes your code and a folder with test cases as input and outputs the results of each test case (PASSED or FAILED).
+
+
+### What are the benefits of using *test.me*?
+
+- You can test your code without having to submit it to an auto-grading tool every time you make a change;
+
+- You can test your code offline, without having to connect to the internet;
+
+- You can test your code in a matter of seconds, without having to re-compile and then copy and paste your input every time;
+
+- Your program's output will be automatically compared to the expected output;
+
+- You can test your code with multiple test cases in a single command;
+
+### Why C?
+
+*test.me* could have been developed in, basically, **any** language. But it was developed in C as a way to improve the developer's skills in this language. Quite often, C and C++ are the languages of choice for studying Data Structures and Algorithms (DSA) and competitive programming. It is important to be able to use them efficiently.
 
 ## How to prepare your enviroment 
 
