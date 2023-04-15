@@ -6,6 +6,7 @@
     - [What is *test.me*?](#what-is-testme)
     - [What does *test.me* do?](#what-does-testme-do)
     - [What are the benefits of using *test.me*?](#what-are-the-benefits-of-using-testme)
+    - [Example usage.](#example-usage)
     - [Why C?](#why-c)
 - [How to prepare your enviroment](#how-to-prepare-your-enviroment)
     - [Linux](#linux)
@@ -40,7 +41,6 @@ It is with these and other setbacks in mind that *test.me* was designed. As a wa
 
 *test.me* is a tool that automates the process of testing your code. It takes your code and a folder with test cases as input and outputs the results of each test case (PASSED or FAILED).
 
-
 ### What are the benefits of using *test.me*?
 
 - You can test your code without having to submit it to an auto-grading tool every time you make a change;
@@ -52,6 +52,10 @@ It is with these and other setbacks in mind that *test.me* was designed. As a wa
 - Your program's output will be automatically compared to the expected output;
 
 - You can test your code with multiple test cases in a single command;
+
+### Example usage
+
+![image](https://user-images.githubusercontent.com/69123486/232141945-609788f4-d869-4b95-8228-62699b14f578.png)
 
 ### Why C?
 
