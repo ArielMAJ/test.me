@@ -155,21 +155,21 @@ int iterate_tests(char *code_path, char *tests_path)
 
         if (strstr(actual_output, expected_output))
         {
-            printf("    |- %s: PASSED\n", dir->d_name);
+            printf("    |- %s: \x1B[32mPASSED\e[0m\n", dir->d_name);
         }
         else
         {
-            printf("    |- %s: FAILED\n", dir->d_name);
-            printf("**********************************************************\n");
-            printf("Expected:\n");
-            printf("----------------------------------------------------------\n");
-            printf("%s", expected_output);
-            printf("----------------------------------------------------------\n");
-            printf("Actual:\n");
-            printf("----------------------------------------------------------\n");
-            printf("%s", actual_output);
-            printf("----------------------------------------------------------\n");
-            printf("**********************************************************\n");
+            printf("    |- %s: \x1B[31mFAILED\e[0m\n", dir->d_name);
+            printf("    |-------------------------------------------------------------\n");
+            printf("        | Expected:\n");
+            printf("        |---------------------------------------------------------\n");
+            printf("        |\x1B[32m%s\e[0m", expected_output);
+            printf("        |---------------------------------------------------------\n");
+            printf("        | Actual:\n");
+            printf("        |---------------------------------------------------------\n");
+            printf("        |\x1B[31m%s\e[0m", actual_output);
+            printf("     ___|---------------------------------------------------------\n");
+            printf("    |\n");
         }
 
         free(actual_output);
