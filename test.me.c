@@ -155,11 +155,11 @@ int iterate_tests(char *code_path, char *tests_path)
 
         if (strstr(actual_output, expected_output))
         {
-            printf("    |- %s: \x1B[32mPASSED\e[0m\n", dir->d_name);
+            printf("    |- %s: \x1B[32mPASSED :)\e[0m\n", dir->d_name);
         }
         else
         {
-            printf("    |- %s: \x1B[31mFAILED\e[0m\n", dir->d_name);
+            printf("    |- %s: \x1B[31mFAILED :(\e[0m\n", dir->d_name);
             printf("    |-------------------------------------------------------------\n");
             printf("        | Expected:\n");
             printf("        |---------------------------------------------------------\n");
