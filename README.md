@@ -55,7 +55,7 @@ It is with these and other setbacks in mind that *test.me* was designed. As a wa
 
 ### Example usage
 
-![image](https://user-images.githubusercontent.com/69123486/232141945-609788f4-d869-4b95-8228-62699b14f578.png)
+<img width="796" alt="image" src="https://user-images.githubusercontent.com/69123486/234079004-b7120ba8-c1fa-4c97-8b8a-c1572a218da0.png">
 
 ### Why C?
 
