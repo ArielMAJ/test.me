@@ -3,25 +3,24 @@
 ## Table of Contents
 
 - [About](#about)
-    - [What is *test.me*?](#what-is-testme)
-    - [What does *test.me* do?](#what-does-testme-do)
-    - [What are the benefits of using *test.me*?](#what-are-the-benefits-of-using-testme)
-    - [Example usage.](#example-usage)
-    - [Why C?](#why-c)
+  - [What is _test.me_?](#what-is-testme)
+  - [What does _test.me_ do?](#what-does-testme-do)
+  - [What are the benefits of using _test.me_?](#what-are-the-benefits-of-using-testme)
+  - [Example usage.](#example-usage)
+  - [Why C?](#why-c)
 - [How to prepare your enviroment](#how-to-prepare-your-enviroment)
-    - [Linux](#linux)
-    - [Windows](#windows)
-    - [MacOS](#macos)
+  - [Linux](#linux)
+  - [Windows](#windows)
+  - [MacOS](#macos)
 - [How to use](#how-to-use)
 - [Compatibility](#compatibility)
 - [Translations](#translations)
 - [License](#license)
 - [Authors, contributors and acknowledgements](#authors-contributors-and-acknowledgements)
 
-
 ## About
 
-### What is *test.me*?
+### What is _test.me_?
 
 As a software developer or even someone just starting out in the world of programming, you've probably faced the following challenges:
 
@@ -35,13 +34,13 @@ As a software developer or even someone just starting out in the world of progra
 
 These are just some of the problems that can arise when you are developing a solution for a problem. Hitches like these can make things a little more difficult than they need to be and take the focus away from what really matters at the moment: YOUR CODE.
 
-It is with these and other setbacks in mind that *test.me* was designed. As a way to optimize what is really important: YOUR TIME.
+It is with these and other setbacks in mind that _test.me_ was designed. As a way to optimize what is really important: YOUR TIME.
 
-### What does *test.me* do?
+### What does _test.me_ do?
 
-*test.me* is a tool that automates the process of testing your code. It takes your code and a folder with test cases as input and outputs the results of each test case (PASSED or FAILED).
+_test.me_ is a tool that automates the process of testing your code. It takes your code and a folder with test cases as input and outputs the results of each test case (PASSED or FAILED).
 
-### What are the benefits of using *test.me*?
+### What are the benefits of using _test.me_?
 
 - You can test your code without having to submit it to an auto-grading tool every time you make a change;
 
@@ -59,15 +58,16 @@ It is with these and other setbacks in mind that *test.me* was designed. As a wa
 
 ### Why C?
 
-*test.me* could have been developed in, basically, **any** language. But it was developed in C as a way to improve the developer's skills in this language. Quite often, C and C++ are the languages of choice for studying Data Structures and Algorithms (DSA) and competitive programming. It is important to be able to use them efficiently.
+_test.me_ could have been developed in, basically, **any** language. But it was developed in C as a way to improve the developer's skills in this language. Quite often, C and C++ are the languages of choice for studying Data Structures and Algorithms (DSA) and competitive programming. It is important to be able to use them efficiently.
 
-## How to prepare your enviroment 
+## How to prepare your enviroment
 
 ### Linux
 
 #### Install git, gcc and make
 
 `Ctrl+Alt+T` to open Terminal.
+
 ```
 sudo apt update
 sudo apt upgrade
@@ -101,6 +101,7 @@ make
 Press `Windows+X` then press `I` to open Terminal.
 
 Then write:
+
 ```
 git clone https://github.com/ArielMAJ/test.me.git
 cd test.me/
@@ -108,7 +109,8 @@ cd test.me/
 
 #### Compile test.me.c
 
-Run the compiling command in [Makefile](./Makefile) (change *test.me* to **test.me.exe**), or run:
+Run the compiling command in [Makefile](./Makefile) (change _test.me_ to **test.me.exe**), or run:
+
 ```
 gcc -Wall -Wextra -o test.me.exe ./test.me.c
 ```
@@ -122,7 +124,7 @@ TBA
 ### Write your code and create tests for it
 
 Write example inputs and expected outputs as per [the examples in this repo](./example_input/).
- 
+
 PS: Input and output for one single test should have the same naming except for the file extension (".in" for input, ".out" for output).
 
 ### Test your code
@@ -130,16 +132,21 @@ PS: Input and output for one single test should have the same naming except for 
 ```
 ./test.me <Path to your C code> <Path to your example inputs and outputs>
 ```
+
 e.g:
+
 ```
 ./test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
 ```
 
 or, if you have many solutions to different problems in a subfolder with the same naming structure, you can test it all with:
+
 ```
 ./test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>
 ```
+
 e.g:
+
 ```
 ./test.me ./solution.c ./tests/ ./example_input/
 ```
@@ -154,7 +161,8 @@ Any and everyone is welcome to test this tool locally and leave feedback at [#78
 
 ## Translations
 
-TBA
+- [Brazilian Portuguese](./translations/README-ptbr.md)
+- [English](./README.md)
 
 ## License
 
@@ -163,9 +171,9 @@ Distributed under the Apache 2.0 License. See [LICENSE](./LICENSE) for more info
 ## Authors, contributors and acknowledgements
 
 - [@ArielMAJ](https://github.com/ArielMAJ): ariel.maj@hotmail.com
-    - Original idea and development;
+  - Original idea and development;
 - [@tauanesales](https://github.com/tauanesales): taysales6@gmail.com
-    - General improvements;
-    - Feedback and ideas;
+  - General improvements;
+  - Feedback and ideas;
 
 [Back to top](#table-of-contents)
