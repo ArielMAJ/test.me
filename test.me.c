@@ -4,7 +4,7 @@
 // #include <errno.h>
 // #include <sys/stat.h>
 #include <string.h>
-#include <sys/stat.h> // stat
+#include <sys/stat.h>  // stat
 // #include <stdbool.h>    // bool type
 
 int file_exists(char *file_path) {
@@ -30,15 +30,18 @@ int main(int argc, char *argv[]) {
     printf("\e[1m\e[4m\e[31mERROR\e[0m: Invalid number of arguments\n\n");
 
     printf("\x1B[32mUsage \e[3m\e[1msingle folder\e[0m:\e[0m ");
-    printf("./test.me \x1B[32m<\e[0mcode_path\x1B[32m>\e[0m "
-           "\x1B[32m<\e[0mtest_folder_path\x1B[32m>\e[0m\e[0m\n");
-    printf("Example: ./test.me ./example_input/Q03/solution.c "
-           "./example_input/Q03/tests/\n");
+    printf(
+        "./test.me \x1B[32m<\e[0mcode_path\x1B[32m>\e[0m "
+        "\x1B[32m<\e[0mtest_folder_path\x1B[32m>\e[0m\e[0m\n");
+    printf(
+        "Example: ./test.me ./example_input/Q03/solution.c "
+        "./example_input/Q03/tests/\n");
 
     printf("\n\x1B[32mUsage \e[3m\e[1mmultiple folders\e[0m:\e[0m ");
-    printf("./test.me \x1B[32m<\e[0mcode_standard_name\x1B[32m>\e[0m "
-           "\x1B[32m<\e[0mtest_folder_standard_name\x1B[32m>\e[0m "
-           "\x1B[32m[\e[0mfolders_path\x1B[32m]\e[0m\e[0m\n");
+    printf(
+        "./test.me \x1B[32m<\e[0mcode_standard_name\x1B[32m>\e[0m "
+        "\x1B[32m<\e[0mtest_folder_standard_name\x1B[32m>\e[0m "
+        "\x1B[32m[\e[0mfolders_path\x1B[32m]\e[0m\e[0m\n");
     printf("Example: ./test.me ./solution.c ./tests/ ./example_input/\n");
 
     printf("\x1B[31m_________________________________________________");
@@ -92,16 +95,16 @@ int iterate_tests(char *code_path, char *tests_path) {
   // char *cmd = (char *) malloc (45 + strlen(code_path) + 1);
   char cmd[1000];
   cmd[0] = '\0';
-  strcat(cmd, "gcc -std=c11 -Wno-sign-compare -Wfloat-equal -Wundef "
-              "-Wcast-align -Wwrite-strings -Wredundant-decls "
-              "-Wno-unused-parameter -Wno-unused-variable -Wshadow -Wall "
-              "-Wextra -Werror -o compiled_test_file.exe -lm ");
+  strcat(cmd,
+         "gcc -std=c11 -Wno-sign-compare -Wfloat-equal -Wundef "
+         "-Wcast-align -Wwrite-strings -Wredundant-decls "
+         "-Wno-unused-parameter -Wno-unused-variable -Wshadow -Wall "
+         "-Wextra -Werror -o compiled_test_file.exe -lm ");
   strcat(cmd, code_path);
   ERROR_CODE += system(cmd);
   // free(cmd);
 
-  if (ERROR_CODE != EXIT_SUCCESS)
-    return ERROR_CODE;
+  if (ERROR_CODE != EXIT_SUCCESS) return ERROR_CODE;
 
   DIR *d = opendir(tests_path);
   if (!d) {
@@ -124,8 +127,7 @@ int iterate_tests(char *code_path, char *tests_path) {
     strcat(output_path, dir->d_name);
 
     char *buffer = &dir->d_name[1];
-    while (*buffer != '.')
-      buffer++;
+    while (*buffer != '.') buffer++;
     buffer[0] = '\0';
 
     input_path[0] = '\0';
@@ -133,8 +135,7 @@ int iterate_tests(char *code_path, char *tests_path) {
     strcat(input_path, dir->d_name);
     strcat(input_path, ".in");
 
-    if (!file_exists(input_path))
-      continue;
+    if (!file_exists(input_path)) continue;
 
     // cmd = (char *) malloc (25 + strlen(input_path) + 3 + strlen(OUTPUT_FILE)
     // + 2);
@@ -162,17 +163,21 @@ int iterate_tests(char *code_path, char *tests_path) {
           "    "
           "|-------------------------------------------------------------\n");
       printf("        | Expected:\n");
-      printf("        "
-             "|---------------------------------------------------------\n");
+      printf(
+          "        "
+          "|---------------------------------------------------------\n");
       printf("        |\x1B[32m%s\e[0m", expected_output);
-      printf("        "
-             "|---------------------------------------------------------\n");
+      printf(
+          "        "
+          "|---------------------------------------------------------\n");
       printf("        | Actual:\n");
-      printf("        "
-             "|---------------------------------------------------------\n");
+      printf(
+          "        "
+          "|---------------------------------------------------------\n");
       printf("        |\x1B[31m%s\e[0m", actual_output);
-      printf("     "
-             "___|---------------------------------------------------------\n");
+      printf(
+          "     "
+          "___|---------------------------------------------------------\n");
       printf("    |\n");
     }
 
@@ -204,8 +209,7 @@ int iterate_folders(char *relative_CODE_path_in_each_folder,
 
   int ERROR_CODE = EXIT_SUCCESS;
   while ((dir = readdir(d)) != NULL && ERROR_CODE == EXIT_SUCCESS) {
-    if (!(dir->d_type == DT_DIR && !strchr(dir->d_name, '.')))
-      continue;
+    if (!(dir->d_type == DT_DIR && !strchr(dir->d_name, '.'))) continue;
     tests_path[0] = '\0';
     strcat(tests_path, folders_path);
     strcat(tests_path, dir->d_name);
@@ -237,13 +241,11 @@ int right_check_unwated(FILE *file, char *to_skip) {
   do {
     is_EOF = !fread(&current_character, sizeof(char), 1, file);
     // Keep reading until reach the end of the file or hit the given condition.
-    if (is_EOF)
-      break;
+    if (is_EOF) break;
   } while (strchr(to_skip, current_character));
 
   int start = ftell(file);
-  if (is_EOF)
-    return start;
+  if (is_EOF) return start;
 
   // Going back one character, as the loop above goes past one character after
   // the last character to_skip.
@@ -261,17 +263,16 @@ int left_check_unwated(FILE *file, char *to_skip) {
     fseek(file, -1, SEEK_CUR);
     { int tmp = fread(&current_character, sizeof(char), 1, file); }
 
-    if (!strchr(" \r\n", current_character))
-      pos = LENGTH;
+    if (!strchr(" \r\n", current_character)) pos = LENGTH;
   }
   do {
-    if (pos == 0 || pos == LENGTH)
-      break;
+    if (pos == 0 || pos == LENGTH) break;
     // As the "current character" was "already read", we have to go back
     // two steps to read the last character.
     fseek(file, -2, SEEK_CUR);
     {
-      int tmp = fread(&current_character, sizeof(char), 1, file); // Reading it.
+      int tmp =
+          fread(&current_character, sizeof(char), 1, file);  // Reading it.
     }
 
     // while (current_character == '\r')
@@ -282,8 +283,7 @@ int left_check_unwated(FILE *file, char *to_skip) {
     pos--;
   } while (strchr(to_skip, current_character));
 
-  if (pos == 0)
-    fseek(file, 0, SEEK_SET);
+  if (pos == 0) fseek(file, 0, SEEK_SET);
   int end = ftell(file);
   // printf("%d %d\n\n", LENGTH,end);
   return end;
@@ -344,11 +344,10 @@ char *get_next_line(FILE *file) {
 
   int contents_length = end_of_line - start_of_line;
 
-  if (contents_length < 1)
-    contents_length = 1;
+  if (contents_length < 1) contents_length = 1;
 
   fseek(file, -contents_length,
-        SEEK_CUR); // Go back to the begining of the line.
+        SEEK_CUR);  // Go back to the begining of the line.
   char *contents = (char *)malloc(sizeof(char) * (contents_length + 1));
   // // printf("\nSOL: %d, EOL: %d, strlen=%d\n", start_of_line, end_of_line,
   // contents_length);
