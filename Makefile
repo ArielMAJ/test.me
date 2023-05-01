@@ -94,3 +94,17 @@ run_folders: default
 valgrind: default
 	$(CLS_COMMAND)
 	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TARGET) ./example_input/Q03/solution.c ./example_input/Q03/tests/
+
+.PHONY: help
+help:
+	@echo "Makefile for the test.me tool"
+	@echo ""
+	@echo "Usage 01: make"
+	@echo "Usage 02: make [option]"
+	@echo ""
+	@echo "Target rules (options):"
+	@echo "	run         	- Compiles and runs binary file with a single folder"
+	@echo "	run_folders 	- Compiles and runs binary file with multiple folders"
+	@echo "	valgrind	- Compiles and runs binary file using valgrind tool"
+	@echo "	clean		- Removes files and folders created by running make"
+	@echo "	help		- Prints a help message with target rules"
