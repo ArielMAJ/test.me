@@ -311,7 +311,7 @@ char *process_file(char *path) {
   LENGTH = ftell(file);
   fseek(file, 0, SEEK_SET);
 
-  char *contents = malloc((LENGTH + 3) * sizeof(char));
+  char *contents = (char *) malloc((LENGTH + 3) * sizeof(char));
   char current_character;
 
   contents[0] = '\0';
