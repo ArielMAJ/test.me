@@ -47,13 +47,6 @@ else
 	RM_COMMAND := rm -rf $(CLEAN_LIST)
 endif
 
-# clear screen
-ifeq ($(OS),Windows_NT)
-	CLS_COMMAND := cls
-else
-	CLS_COMMAND := clear
-endif
-
 # default rule
 default: clean makedir all
 
@@ -78,21 +71,18 @@ clean:
 
 .PHONY: run
 run: default
-	$(CLS_COMMAND)
 	@echo Example run:
 	@echo ./$(TARGET) ./example_input/Q03/solution.c ./example_input/Q03/tests/
 	./$(TARGET) ./example_input/Q03/solution.c ./example_input/Q03/tests/
 
 .PHONY: run_folders
 run_folders: default
-	$(CLS_COMMAND)
 	@echo Example run:
 	@echo ./$(TARGET) ./solution.c ./tests/ ./example_input/
 	./$(TARGET) ./solution.c ./tests/ ./example_input/
 
 .PHONY: valgrind
 valgrind: default
-	$(CLS_COMMAND)
 	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TARGET) ./example_input/Q03/solution.c ./example_input/Q03/tests/
 
 .PHONY: help
