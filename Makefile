@@ -14,7 +14,7 @@ CCOBJFLAGS := $(CFLAGS) -c
 # path macros
 BIN_PATH := bin
 OBJ_PATH := obj
-SRC_PATH := .
+SRC_PATH := src
 
 ifeq ($(OS),Windows_NT)
 	MKDIR_COMMAND := \
