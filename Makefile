@@ -62,7 +62,7 @@ $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $<
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
-	$(CXX) $(CCOBJFLAGS) -o $@ $<
+	$(CC) $(CCOBJFLAGS) -o $@ $<
 
 # phony rules
 .PHONY: makedir
