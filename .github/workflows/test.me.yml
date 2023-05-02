@@ -30,10 +30,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Compile test.me.c
-        run: make;
+        run: make; make clean; make help;
 
       - name: Run test.me with one folder.
-        run: make run;
+        run: make run VERBOSE=1;
 
       - name: Run test.me with many subfolders.
         run: make run_folders;
