@@ -8,7 +8,6 @@ endif
 # tool macros
 CC := gcc
 CFLAGS := -Wno-sign-compare -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wlogical-op -Wredundant-decls -Wno-unused-parameter -Wno-unused-variable -Wshadow -Wall -Wextra
-DBGFLAGS := -g
 CCOBJFLAGS := $(CFLAGS) -c
 
 # path macros
@@ -52,7 +51,7 @@ default: clean makedir all
 
 # non-phony targets
 $(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $<
+	$(CC) $(CFLAGS) -o $@ $(OBJ)
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	$(CC) $(CCOBJFLAGS) -o $@ $<
