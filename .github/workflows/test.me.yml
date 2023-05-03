@@ -36,4 +36,4 @@ jobs:
         run: make run VERBOSE=1;
 
       - name: Run test.me with many subfolders.
-        run: make run_folders;
+        run: make run_all;

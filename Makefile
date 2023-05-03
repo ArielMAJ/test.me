@@ -74,8 +74,8 @@ run: default
 	@echo ./$(TARGET) ./example_input/Q03/solution.c ./example_input/Q03/tests/
 	./$(TARGET) ./example_input/Q03/solution.c ./example_input/Q03/tests/
 
-.PHONY: run_folders
-run_folders: default
+.PHONY: run_all
+run_all: default
 	@echo Example run:
 	@echo ./$(TARGET) ./solution.c ./tests/ ./example_input/
 	./$(TARGET) ./solution.c ./tests/ ./example_input/
@@ -93,7 +93,7 @@ help:
 	@echo ""
 	@echo "Target rules (options):"
 	@echo "	run         	- Compiles and runs binary file with a single folder"
-	@echo "	run_folders 	- Compiles and runs binary file with multiple folders"
+	@echo "	run_all 	- Compiles and runs binary file with multiple folders"
 	@echo "	valgrind	- Compiles and runs binary file using valgrind tool"
 	@echo "	clean		- Removes files and folders created by running make"
 	@echo "	help		- Prints a help message with target rules"
