@@ -1,11 +1,12 @@
 #include <dirent.h>
+// #include <errno.h>
+// #include <stdbool.h>  // bool type
 #include <stdio.h>
 #include <stdlib.h>
-// #include <errno.h>
-// #include <sys/stat.h>
 #include <string.h>
 #include <sys/stat.h>  // stat
-// #include <stdbool.h>    // bool type
+
+#include "colors.h"
 
 int file_exists(char *file_path) {
   struct stat buffer;
@@ -25,27 +26,28 @@ long int LENGTH;
 
 int main(int argc, char *argv[]) {
   if (argc < 3 || argc > 4) {
-    printf("\x1B[31m_________________________________________________");
-    printf("__________________________________________________\e[0m\n");
-    printf("\e[1m\e[4m\e[31mERROR\e[0m: Invalid number of arguments\n\n");
+    printf(RED
+           "___________________________________________________________________"
+           "________________________________\n" NO_COLOR);
+    printf("\e[1m\e[4m\e[31mERROR" NO_COLOR
+           ": Invalid number of arguments\n\n");
 
-    printf("\x1B[32mUsage \e[3m\e[1msingle folder\e[0m:\e[0m ");
-    printf(
-        "./test.me \x1B[32m<\e[0mcode_path\x1B[32m>\e[0m "
-        "\x1B[32m<\e[0mtest_folder_path\x1B[32m>\e[0m\e[0m\n");
+    printf(GREEN "Usage \e[3m\e[1msingle folder" NO_COLOR ": " YELLOW
+                 "./test.me " GREEN "<" CYAN "code_path" GREEN "> <" CYAN
+                 "test_folder_path" GREEN ">\n" NO_COLOR);
     printf(
         "Example: ./test.me ./example_input/Q03/solution.c "
-        "./example_input/Q03/tests/\n");
+        "./example_input/Q03/tests/\n\n");
 
-    printf("\n\x1B[32mUsage \e[3m\e[1mmultiple folders\e[0m:\e[0m ");
-    printf(
-        "./test.me \x1B[32m<\e[0mcode_standard_name\x1B[32m>\e[0m "
-        "\x1B[32m<\e[0mtest_folder_standard_name\x1B[32m>\e[0m "
-        "\x1B[32m[\e[0mfolders_path\x1B[32m]\e[0m\e[0m\n");
+    printf(GREEN "Usage \e[3m\e[1mmultiple folders" NO_COLOR ": " YELLOW
+                 "./test.me " GREEN "<" CYAN "code_standard_name" GREEN
+                 "> <" CYAN "test_folder_standard_name" GREEN "> [" CYAN
+                 "folders_path" GREEN "]\n" NO_COLOR);
     printf("Example: ./test.me ./solution.c ./tests/ ./example_input/\n");
 
-    printf("\x1B[31m_________________________________________________");
-    printf("__________________________________________________\e[0m\n");
+    printf(RED
+           "___________________________________________________________________"
+           "________________________________\n" NO_COLOR);
 
     return EXIT_FAILURE;
   }
@@ -156,9 +158,9 @@ int iterate_tests(char *code_path, char *tests_path) {
     char *expected_output = process_file(output_path);
 
     if (strstr(actual_output, expected_output)) {
-      printf("    |- %s: \x1B[32mPASSED :)\e[0m\n", dir->d_name);
+      printf("    |- %s: " GREEN "PASSED :)" NO_COLOR "\n", dir->d_name);
     } else {
-      printf("    |- %s: \x1B[31mFAILED :(\e[0m\n", dir->d_name);
+      printf("    |- %s: " RED "FAILED :(" NO_COLOR "\n", dir->d_name);
       printf(
           "    "
           "|-------------------------------------------------------------\n");
@@ -166,7 +168,7 @@ int iterate_tests(char *code_path, char *tests_path) {
       printf(
           "        "
           "|---------------------------------------------------------\n");
-      printf("        |\x1B[32m%s\e[0m", expected_output);
+      printf("        |" GREEN "%s" NO_COLOR, expected_output);
       printf(
           "        "
           "|---------------------------------------------------------\n");
@@ -174,7 +176,7 @@ int iterate_tests(char *code_path, char *tests_path) {
       printf(
           "        "
           "|---------------------------------------------------------\n");
-      printf("        |\x1B[31m%s\e[0m", actual_output);
+      printf("        |" RED "%s" NO_COLOR, actual_output);
       printf(
           "     "
           "___|---------------------------------------------------------\n");
@@ -311,7 +313,7 @@ char *process_file(char *path) {
   LENGTH = ftell(file);
   fseek(file, 0, SEEK_SET);
 
-  char *contents = (char *) malloc((LENGTH + 3) * sizeof(char));
+  char *contents = (char *)malloc((LENGTH + 3) * sizeof(char));
   char current_character;
 
   contents[0] = '\0';
