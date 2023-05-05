@@ -54,7 +54,7 @@ _test.me_ is a tool that automates the process of testing your code. It takes yo
 
 ### Example usage
 
-<img width="796" alt="image" src="https://user-images.githubusercontent.com/69123486/234079004-b7120ba8-c1fa-4c97-8b8a-c1572a218da0.png">
+<img width="702" alt="image" src="https://user-images.githubusercontent.com/62819445/236364257-c30bb286-b863-45bd-9eb8-eea5cd4b0fc8.png">
 
 ### Why C?
 
