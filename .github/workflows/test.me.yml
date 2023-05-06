@@ -7,7 +7,7 @@ on:
       - ".github/workflows/test.me.yml"
       - "example_input/**"
       - "Makefile"
-      - "test.me.c"
+      - "./src/*"
 
   pull_request:
     #     branches: [ main ]
@@ -15,7 +15,7 @@ on:
       - ".github/workflows/test.me.yml"
       - "example_input/**"
       - "Makefile"
-      - "test.me.c"
+      - "./src/*"
 
 permissions:
   contents: read
