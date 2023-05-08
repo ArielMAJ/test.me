@@ -140,25 +140,25 @@ PS: Input and output for one single test should have the same naming except for 
 ### Test your code
 
 ```
-./test.me <Path to your C code> <Path to your example inputs and outputs>
+./bin/test.me <Path to your C code> <Path to your example inputs and outputs>
 ```
 
 e.g:
 
 ```
-./test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
+./bin/test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
 ```
 
 or, if you have many solutions to different problems in a subfolder with the same naming structure, you can test it all with:
 
 ```
-./test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>
+./bin/test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>
 ```
 
 e.g:
 
 ```
-./test.me ./solution.c ./tests/ ./example_input/
+./bin/test.me ./solution.c ./tests/ ./example_input/
 ```
 
 ## Compatibility
