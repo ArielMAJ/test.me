@@ -85,12 +85,6 @@ git clone https://github.com/ArielMAJ/test.me.git
 cd test.me/
 ```
 
-#### Compile test.me
-
-```
-make
-```
-
 ### Windows
 
 #### Install chocolatey
@@ -119,17 +113,28 @@ git clone https://github.com/ArielMAJ/test.me.git
 cd test.me/
 ```
 
-#### Compile test.me
-
-```
-make
-```
-
 ### MacOS
 
 TBA
 
 ## How to use
+
+### Make shenanigans
+
+```bash
+make # Compiles the project.
+make help # Shows the Makefile's help info.
+make clean # Cleans the project's build files.
+make run # Runs the project with an example input.
+make run_all # Runs the project with all example inputs.
+make valgrind # Runs the project with valgrind (needs valgrind installed -> Linux only).
+```
+
+### Compile test.me
+
+```
+make
+```
 
 ### Write your code and create tests for it
 
