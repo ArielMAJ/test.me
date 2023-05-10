@@ -22,7 +22,16 @@ TBA
 
 ## Local Development
 
-TBA
+Make sure you have installed all the tools in the [How to prepare your enviroment](./README.md#how-to-prepare-your-enviroment) section in the README.
+
+After you make any changes to the source code, you can compile the project by running `make` in the root folder of the project. Any new `.c` files will be automatically added to the compilation process by the makefile. You can also run `make clean` to remove all the compiled files. If you want to run the project with the example inputs, as a way to easily check if the project is working properly, you can run `make run` or `make run_all` to run all the example inputs.
+
+## Before your PR
+
+Before you submit a pull request, please make sure you have:
+1. Ran `make run_all` and `make valgrind` to check if everything is working properly;
+2. Ran `make format` to format the code;
+3. Updated the documentation related to the functionality you implemented, if necessary.
 
 ## Any contributions you make will be under the Apache 2.0 Software License
 
