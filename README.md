@@ -128,6 +128,8 @@ make clean # Cleans the project's build files.
 make run # Runs the project with an example input.
 make run_all # Runs the project with all example inputs.
 make valgrind # Runs the project with valgrind (needs valgrind installed -> Linux only).
+make valgrind_all # Runs the project with multiple folders option using valgrind (needs valgrind installed -> Linux only).
+make format # Runs clang-format on the project's source files (needs clang-format installed).
 ```
 
 ### Compile test.me
