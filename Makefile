@@ -84,6 +84,10 @@ run_all: default
 valgrind: default
 	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TARGET) ./example_input/Q03/solution.c ./example_input/Q03/tests/
 
+.PHONY: valgrind_all
+valgrind_all: default
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TARGET) ./solution.c ./tests/ ./example_input/
+
 .PHONY: format
 format:
 	@echo clang-format -i $(SRC) --style=Google
@@ -101,5 +105,6 @@ help:
 	@echo "	run_all 	- Compiles and runs binary file with multiple folders"
 	@echo "	format		- Formats the source code using clang-format tool"
 	@echo "	valgrind	- Compiles and runs binary file using valgrind tool"
+	@echo "	valgrind_all	- Compiles and runs binary file with multiple folders using valgrind tool"
 	@echo "	clean		- Removes files and folders created by running make"
 	@echo "	help		- Prints a help message with target rules"
