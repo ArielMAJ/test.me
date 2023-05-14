@@ -2,21 +2,21 @@ name: test.me
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
-      - '.github/workflows/test.me.yml'
-      - 'example_input/**'
-      - 'Makefile'
-      - 'test.me.c'
-       
+      - ".github/workflows/test.me.yml"
+      - "example_input/**"
+      - "Makefile"
+      - "./src/*"
+
   pull_request:
-#     branches: [ main ]
+    #     branches: [ main ]
     paths:
-      - '.github/workflows/test.me.yml'
-      - 'example_input/**'
-      - 'Makefile'
-      - 'test.me.c'
-      
+      - ".github/workflows/test.me.yml"
+      - "example_input/**"
+      - "Makefile"
+      - "./src/*"
+
 permissions:
   contents: read
 
@@ -28,13 +28,12 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Compile test.me.c
-      run: make;
-      
-    - name: Run test.me with one folder.
-      run: ./test.me ./example_input/Q01/solution.c ./example_input/Q01/tests/
-      
-    - name: Run test.me with many subfolders.
-      run: ./test.me ./solution.c ./tests/ ./example_input/
-        
+      - uses: actions/checkout@v3
+      - name: Compile test.me.c
+        run: make; make clean; make help;
+
+      - name: Run test.me with one folder.
+        run: make run VERBOSE=1;
+
+      - name: Run test.me with many subfolders.
+        run: make run_all;

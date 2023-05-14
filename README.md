@@ -15,6 +15,7 @@
 - [How to use](#how-to-use)
 - [Compatibility](#compatibility)
 - [Translations](#translations)
+- [Contributing](#contributing)
 - [License](#license)
 - [Authors, contributors and acknowledgements](#authors-contributors-and-acknowledgements)
 
@@ -54,7 +55,7 @@ _test.me_ is a tool that automates the process of testing your code. It takes yo
 
 ### Example usage
 
-<img width="796" alt="image" src="https://user-images.githubusercontent.com/69123486/234079004-b7120ba8-c1fa-4c97-8b8a-c1572a218da0.png">
+<img width="702" alt="image" src="https://user-images.githubusercontent.com/62819445/236364257-c30bb286-b863-45bd-9eb8-eea5cd4b0fc8.png">
 
 ### Why C?
 
@@ -64,7 +65,7 @@ _test.me_ could have been developed in, basically, **any** language. But it was 
 
 ### Linux
 
-#### Install git, gcc and make
+#### Install git, gcc, make and clang-format
 
 `Ctrl+Alt+T` to open Terminal.
 
@@ -74,6 +75,7 @@ sudo apt upgrade
 sudo apt install git
 sudo apt install make
 sudo apt install gcc
+sudo apt install clang-format
 ```
 
 #### Download this repo
@@ -83,18 +85,22 @@ git clone https://github.com/ArielMAJ/test.me.git
 cd test.me/
 ```
 
-#### Compile test.me.c
-
-```
-make
-```
-
 ### Windows
 
-#### Install git and gcc
+#### Install chocolatey
 
-1. [Download and install git](https://git-scm.com/download/win);
-2. [Download and install gcc](https://sourceforge.net/projects/mingw/).
+- [Chocolatey](https://chocolatey.org/install) is "The Sane Way to Manage Software on Windows".
+
+#### Install git, gcc, make and clang-format
+
+Press `Windows+X` then press `A` to open admin Terminal.
+
+```
+choco install git
+choco install mingw
+choco install make
+choco install llvm
+```
 
 #### Download this repo
 
@@ -107,19 +113,30 @@ git clone https://github.com/ArielMAJ/test.me.git
 cd test.me/
 ```
 
-#### Compile test.me.c
-
-Run the compiling command in [Makefile](./Makefile) (change _test.me_ to **test.me.exe**), or run:
-
-```
-gcc -Wall -Wextra -o test.me.exe ./test.me.c
-```
-
 ### MacOS
 
 TBA
 
 ## How to use
+
+### Make shenanigans
+
+```bash
+make # Compiles the project.
+make help # Shows the Makefile's help info.
+make clean # Cleans the project's build files.
+make run # Runs the project with an example input.
+make run_all # Runs the project with all example inputs.
+make valgrind # Runs the project with valgrind (needs valgrind installed -> Linux only).
+make valgrind_all # Runs the project with multiple folders option using valgrind (needs valgrind installed -> Linux only).
+make format # Runs clang-format on the project's source files (needs clang-format installed).
+```
+
+### Compile test.me
+
+```
+make
+```
 
 ### Write your code and create tests for it
 
@@ -130,25 +147,25 @@ PS: Input and output for one single test should have the same naming except for 
 ### Test your code
 
 ```
-./test.me <Path to your C code> <Path to your example inputs and outputs>
+./bin/test.me <Path to your C code> <Path to your example inputs and outputs>
 ```
 
 e.g:
 
 ```
-./test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
+./bin/test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
 ```
 
 or, if you have many solutions to different problems in a subfolder with the same naming structure, you can test it all with:
 
 ```
-./test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>
+./bin/test.me <Solution path in each subfolder> <Tests path in each subfolder> <Folder with subfolders for testing>
 ```
 
 e.g:
 
 ```
-./test.me ./solution.c ./tests/ ./example_input/
+./bin/test.me ./solution.c ./tests/ ./example_input/
 ```
 
 ## Compatibility
@@ -163,6 +180,10 @@ Any and everyone is welcome to test this tool locally and leave feedback at [#78
 
 - [Brazilian Portuguese](./translations/README-ptbr.md)
 - [English](./README.md)
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place. With them we are able to be learn, inspire and create much more. Any contributions you make are **greatly appreciated**. For more information, see [CONTRIBUTING](./CONTRIBUTING.md).
 
 ## License
 

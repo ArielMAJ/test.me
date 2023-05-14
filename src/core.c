@@ -1,88 +1,16 @@
+
+#include "core.h"
+
 #include <dirent.h>
 #include <stdio.h>
 #include <stdlib.h>
-// #include <errno.h>
-// #include <sys/stat.h>
 #include <string.h>
 #include <sys/stat.h>  // stat
-// #include <stdbool.h>    // bool type
 
-int file_exists(char *file_path) {
-  struct stat buffer;
-  return (stat(file_path, &buffer) == 0);
-}
-
-int iterate_tests(char *, char *);
-int iterate_folders(char *, char *, char *);
-char *process_file(char *path);
-int right_check_unwated(FILE *file, char *to_skip);
-int left_check_unwated(FILE *file, char *to_skip);
-void f_close(FILE *file);
-char *get_next_line(FILE *file);
+#include "colors.h"
 
 char OUTPUT_FILE[] = "output.txt";
 long int LENGTH;
-
-int main(int argc, char *argv[]) {
-  if (argc < 3 || argc > 4) {
-    printf("\x1B[31m_________________________________________________");
-    printf("__________________________________________________\e[0m\n");
-    printf("\e[1m\e[4m\e[31mERROR\e[0m: Invalid number of arguments\n\n");
-
-    printf("\x1B[32mUsage \e[3m\e[1msingle folder\e[0m:\e[0m ");
-    printf(
-        "./test.me \x1B[32m<\e[0mcode_path\x1B[32m>\e[0m "
-        "\x1B[32m<\e[0mtest_folder_path\x1B[32m>\e[0m\e[0m\n");
-    printf(
-        "Example: ./test.me ./example_input/Q03/solution.c "
-        "./example_input/Q03/tests/\n");
-
-    printf("\n\x1B[32mUsage \e[3m\e[1mmultiple folders\e[0m:\e[0m ");
-    printf(
-        "./test.me \x1B[32m<\e[0mcode_standard_name\x1B[32m>\e[0m "
-        "\x1B[32m<\e[0mtest_folder_standard_name\x1B[32m>\e[0m "
-        "\x1B[32m[\e[0mfolders_path\x1B[32m]\e[0m\e[0m\n");
-    printf("Example: ./test.me ./solution.c ./tests/ ./example_input/\n");
-
-    printf("\x1B[31m_________________________________________________");
-    printf("__________________________________________________\e[0m\n");
-
-    return EXIT_FAILURE;
-  }
-
-  char *code_path = argv[1];
-  char tests_path[strlen(argv[2]) + 2];
-  tests_path[0] = '\0';
-  strcat(tests_path, argv[2]);
-  if (tests_path[strlen(tests_path) - 1] != '/' &&
-      tests_path[strlen(tests_path) - 1] != '\\')
-    strcat(tests_path, "/");
-
-  int ERROR_CODE = EXIT_SUCCESS;
-
-  if (argc == 3)
-    ERROR_CODE += iterate_tests(code_path, tests_path);
-  else {
-    char folders_path[strlen(argv[3]) + 2];
-    folders_path[0] = '\0';
-    strcat(folders_path, argv[3]);
-    if (folders_path[strlen(folders_path) - 1] != '/' &&
-        folders_path[strlen(folders_path) - 1] != '\\')
-      strcat(folders_path, "/");
-
-    ERROR_CODE += iterate_folders(code_path, tests_path, folders_path);
-  }
-
-#ifdef _WIN32
-  ERROR_CODE += system("del compiled_test_file.exe");
-  ERROR_CODE += system("del output.txt");
-#else
-  ERROR_CODE += system("rm ./compiled_test_file.exe");
-  ERROR_CODE += system("rm ./output.txt");
-#endif
-
-  return ERROR_CODE;
-}
 
 int iterate_tests(char *code_path, char *tests_path) {
   if (!file_exists(code_path)) {
@@ -156,9 +84,9 @@ int iterate_tests(char *code_path, char *tests_path) {
     char *expected_output = process_file(output_path);
 
     if (strstr(actual_output, expected_output)) {
-      printf("    |- %s: \x1B[32mPASSED :)\e[0m\n", dir->d_name);
+      printf("    |- %s: " GREEN "PASSED :)" NO_COLOR "\n", dir->d_name);
     } else {
-      printf("    |- %s: \x1B[31mFAILED :(\e[0m\n", dir->d_name);
+      printf("    |- %s: " RED "FAILED :(" NO_COLOR "\n", dir->d_name);
       printf(
           "    "
           "|-------------------------------------------------------------\n");
@@ -166,7 +94,7 @@ int iterate_tests(char *code_path, char *tests_path) {
       printf(
           "        "
           "|---------------------------------------------------------\n");
-      printf("        |\x1B[32m%s\e[0m", expected_output);
+      printf("        |" GREEN "%s" NO_COLOR, expected_output);
       printf(
           "        "
           "|---------------------------------------------------------\n");
@@ -174,7 +102,7 @@ int iterate_tests(char *code_path, char *tests_path) {
       printf(
           "        "
           "|---------------------------------------------------------\n");
-      printf("        |\x1B[31m%s\e[0m", actual_output);
+      printf("        |" RED "%s" NO_COLOR, actual_output);
       printf(
           "     "
           "___|---------------------------------------------------------\n");
@@ -311,7 +239,7 @@ char *process_file(char *path) {
   LENGTH = ftell(file);
   fseek(file, 0, SEEK_SET);
 
-  char *contents = malloc((LENGTH + 3) * sizeof(char));
+  char *contents = (char *)malloc((LENGTH + 3) * sizeof(char));
   char current_character;
 
   contents[0] = '\0';
@@ -357,4 +285,9 @@ char *get_next_line(FILE *file) {
 
   fseek(file, curr_pos - end_of_line, SEEK_CUR);
   return contents;
+}
+
+int file_exists(char *file_path) {
+  struct stat buffer;
+  return (stat(file_path, &buffer) == 0);
 }
