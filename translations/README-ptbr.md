@@ -15,6 +15,7 @@
 - [Como usar](#como-usar)
 - [Compatibilidade](#compatibilidade)
 - [Traduções](#traduções)
+- [Contribuindo](#contribuindo)
 - [Licença](#licença)
 - [Autores, contribuidores e agradecimentos](#autores-contribuidores-e-agradecimentos)
 
@@ -163,6 +164,10 @@ Toda e qualquer pessoa é bem-vinda para testar essa ferramenta localmente e dei
 
 - [Português Brasileiro](./README-ptbr.md)
 - [English](../README.md)
+
+## Contribuindo
+
+Contribuições são sempre bem-vindas! Por favor, leia o [guia de contribuição](./CONTRIBUTING.md) para mais detalhes sobre como contribuir com este projeto.
 
 ## Licença
 
