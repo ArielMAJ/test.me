@@ -147,25 +147,25 @@ Obs.: A entrada e saída para um único teste devem ter o mesmo nome, exceto pel
 ### Teste seu código
 
 ```
-./test.me <Caminho para seu código C> <Caminho para seus exemplos de entrada e saída>
+./bin/test.me <Caminho para seu código C> <Caminho para seus exemplos de entrada e saída>
 ```
 
 Ex.:
 
 ```
-./test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
+./bin/test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
 ```
 
 ou, se você tiver muitas soluções para problemas diferentes em uma subpasta com a mesma estrutura de nome, você pode testar tudo com:
 
 ```
-./test.me <Caminho para a solução em cada pasta> <Caminho para os testes em cada pasta> <Pasta com subpastas para testar>
+./bin/test.me <Caminho para a solução em cada pasta> <Caminho para os testes em cada pasta> <Pasta com subpastas para testar>
 ```
 
 e.g:
 
 ```
-./test.me ./solution.c ./tests/ ./example_input/
+./bin/test.me ./solution.c ./tests/ ./example_input/
 ```
 
 ## Compatibilidade
