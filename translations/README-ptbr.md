@@ -15,6 +15,7 @@
 - [Como usar](#como-usar)
 - [Compatibilidade](#compatibilidade)
 - [Traduções](#traduções)
+- [Contribuindo](#contribuindo)
 - [Licença](#licença)
 - [Autores, contribuidores e agradecimentos](#autores-contribuidores-e-agradecimentos)
 
@@ -54,7 +55,7 @@ O _test.me_ é uma ferramenta que automatiza o processo de teste do seu código.
 
 ### Exemplo de uso
 
-<img width="796" alt="image" src="https://user-images.githubusercontent.com/69123486/234079004-b7120ba8-c1fa-4c97-8b8a-c1572a218da0.png">
+<img width="702" alt="image" src="https://user-images.githubusercontent.com/62819445/236364257-c30bb286-b863-45bd-9eb8-eea5cd4b0fc8.png">
 
 ### Por que C?
 
@@ -64,7 +65,7 @@ O _test.me_ poderia ter sido desenvolvido em, basicamente, **qualquer** linguage
 
 ### Linux
 
-#### Instalar git, gcc e make
+#### Instalar git, gcc, make e clang-format
 
 `Ctrl+Alt+T` para abrir o Terminal.
 
@@ -74,6 +75,7 @@ sudo apt upgrade
 sudo apt install git
 sudo apt install make
 sudo apt install gcc
+sudo apt install clang-format
 ```
 
 #### Baixar este repositório
@@ -83,18 +85,22 @@ git clone https://github.com/ArielMAJ/test.me.git
 cd test.me/
 ```
 
-#### Compilar test.me.c
-
-```
-make
-```
-
 ### Windows
 
-#### Instalar git e gcc
+#### Instalar chocolatey
 
-1. [Baixar e instalar git](https://git-scm.com/download/win);
-2. [Baixar e instalar gcc](https://sourceforge.net/projects/mingw/).
+- [Chocolatey](https://chocolatey.org/install) é "A maneira sã de gerenciar software no Windows".
+
+#### Instalar git, gcc, make e clang-format
+
+Aperte `Windows+X` e então `A` para abrir o Terminal.
+
+```
+choco install git
+choco install mingw
+choco install make
+choco install llvm
+```
 
 #### Baixar este repositório
 
@@ -107,19 +113,30 @@ git clone https://github.com/ArielMAJ/test.me.git
 cd test.me/
 ```
 
-#### Compilar test.me.c
-
-Rodar o comando de compilação no [Makefile](./Makefile) (mudar _test.me_ para **test.me.exe**), ou rodar:
-
-```
-gcc -Wall -Wextra -o test.me.exe ./test.me.c
-```
-
 ### MacOS
 
 TBA
 
 ## Como usar
+
+### Comandos `make`
+
+```bash
+make # Compila o projeto.
+make help # Mostra os comandos disponíveis.
+make clean # Apaga os arquivos compilados.
+make run # Roda o projeto com um exemplo de entrada.
+make run_all # Roda o projeto com todos os exemplos de entrada.
+make valgrind # Roda o projeto com um exemplo de entrada usando valgrind (precisa ter valgrind instalado -> Apenas Linux).
+make valgrind_all # Roda o projeto com todos os exemplos de entrada usando valgrind (precisa ter valgrind instalado -> Apenas Linux).
+make format # Roda o clang-format no projeto para formatar o código (precisa do clang-format instalado).
+```
+
+### Compilar test.me
+
+```
+make
+```
 
 ### Escreva seu código e crie casos de teste para ele
 
@@ -130,25 +147,25 @@ Obs.: A entrada e saída para um único teste devem ter o mesmo nome, exceto pel
 ### Teste seu código
 
 ```
-./test.me <Caminho para seu código C> <Caminho para seus exemplos de entrada e saída>
+./bin/test.me <Caminho para seu código C> <Caminho para seus exemplos de entrada e saída>
 ```
 
 Ex.:
 
 ```
-./test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
+./bin/test.me ./example_input/Q03/solution.c ./example_input/Q03/tests/
 ```
 
 ou, se você tiver muitas soluções para problemas diferentes em uma subpasta com a mesma estrutura de nome, você pode testar tudo com:
 
 ```
-./test.me <Caminho para a solução em cada pasta> <Caminho para os testes em cada pasta> <Pasta com subpastas para testar>
+./bin/test.me <Caminho para a solução em cada pasta> <Caminho para os testes em cada pasta> <Pasta com subpastas para testar>
 ```
 
 e.g:
 
 ```
-./test.me ./solution.c ./tests/ ./example_input/
+./bin/test.me ./solution.c ./tests/ ./example_input/
 ```
 
 ## Compatibilidade
@@ -163,6 +180,10 @@ Toda e qualquer pessoa é bem-vinda para testar essa ferramenta localmente e dei
 
 - [Português Brasileiro](./README-ptbr.md)
 - [English](../README.md)
+
+## Contribuindo
+
+Contribuições são sempre bem-vindas! Por favor, leia o [guia de contribuição](./CONTRIBUTING.md) para mais detalhes sobre como contribuir com este projeto.
 
 ## Licença
 
