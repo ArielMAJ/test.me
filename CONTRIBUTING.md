@@ -44,9 +44,61 @@ To understand how test.me reads files, think of files as a very long string/vect
 
 ## Local Development
 
-Make sure you have installed all the tools in the [How to prepare your enviroment](./README.md#how-to-prepare-your-enviroment) section in the README.
+Make sure you have installed all the tools in the [How to prepare your environment](./README.md#how-to-prepare-your-environment) section in the README.
 
 After you make any changes to the source code, you can compile the project by running `make` in the root folder of the project. Any new `.c` files will be automatically added to the compilation process by the makefile. You can also run `make clean` to remove all the compiled files. If you want to run the project with the example inputs, as a way to easily check if the project is working properly, you can run `make run` or `make run_all` to run all the example inputs.
+
+#### Install valgrind (Linux Only)
+
+Valgrind is a tool for detecting memory leaks and other memory-related errors. To install valgrind, follow these steps:
+
+### Linux
+
+```bash
+sudo apt update
+sudo apt install valgrind
+```
+
+#### Install clang-format
+
+Clang-format is a tool for automatically formatting source code according to a specified coding style. To install clang-format, follow these steps:
+
+### Linux
+
+```bash
+sudo apt update
+sudo apt install clang-format
+```
+
+### Windows
+
+#### Install chocolatey
+
+- [Chocolatey](https://chocolatey.org/install) is "The Sane Way to Manage Software on Windows".
+
+#### Install git, gcc, make and clang-format
+
+Press `Windows+X` then press `A` to open admin Terminal.
+
+```
+choco install git
+choco install mingw
+choco install make
+choco install llvm
+choco install valgrind
+```
+
+After installing valgrind and clang-format, you can use the following commands:
+
+- `make format`: This command runs clang-format on the project's source files to automatically format the code according to the project's coding style.
+
+- `make valgrind`: This command runs the project with valgrind to detect memory issues and errors.
+
+<link rel="stylesheet" type="text/css" href="warning.css">
+
+<div class="warning">
+    <p><strong>Warning:</strong> It is recommended to run `make format` and `make valgrind` before committing or making pull requests to ensure consistent formatting and identify any potential memory issues in the code.</p>
+</div>
 
 ## Before your PR
 
