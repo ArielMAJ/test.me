@@ -94,11 +94,7 @@ After installing valgrind and clang-format, you can use the following commands:
 
 - `make valgrind`: This command runs the project with valgrind to detect memory issues and errors.
 
-<link rel="stylesheet" type="text/css" href="warning.css">
-
-<div class="warning">
-    <p><strong>Warning:</strong> It is recommended to run `make format` and `make valgrind` before committing or making pull requests to ensure consistent formatting and identify any potential memory issues in the code.</p>
-</div>
+#### It is recommended to run `make format` and `make valgrind` before committing or making pull requests to ensure consistent formatting and identify any potential memory issues in the code.
 
 ## Before your PR
 
