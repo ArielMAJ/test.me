@@ -61,11 +61,11 @@ _test.me_ is a tool that automates the process of testing your code. It takes yo
 
 _test.me_ could have been developed in, basically, **any** language. But it was developed in C as a way to improve the developer's skills in this language. Quite often, C and C++ are the languages of choice for studying Data Structures and Algorithms (DSA) and competitive programming. It is important to be able to use them efficiently.
 
-## How to prepare your enviroment
+## How to prepare your environment
 
 ### Linux
 
-#### Install git, gcc, make and clang-format
+#### Install git, gcc, and make
 
 `Ctrl+Alt+T` to open Terminal.
 
@@ -75,7 +75,6 @@ sudo apt upgrade
 sudo apt install git
 sudo apt install make
 sudo apt install gcc
-sudo apt install clang-format
 ```
 
 #### Download this repo
@@ -91,7 +90,7 @@ cd test.me/
 
 - [Chocolatey](https://chocolatey.org/install) is "The Sane Way to Manage Software on Windows".
 
-#### Install git, gcc, make and clang-format
+#### Install git, gcc, and make
 
 Press `Windows+X` then press `A` to open admin Terminal.
 
@@ -99,7 +98,6 @@ Press `Windows+X` then press `A` to open admin Terminal.
 choco install git
 choco install mingw
 choco install make
-choco install llvm
 ```
 
 #### Download this repo
@@ -127,8 +125,6 @@ make help # Shows the Makefile's help info.
 make clean # Cleans the project's build files.
 make run # Runs the project with an example input.
 make run_all # Runs the project with all example inputs.
-make valgrind # Runs the project with valgrind (needs valgrind installed -> Linux only).
-make valgrind_all # Runs the project with multiple folders option using valgrind (needs valgrind installed -> Linux only).
 make format # Runs clang-format on the project's source files (needs clang-format installed).
 ```
 
