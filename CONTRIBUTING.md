@@ -8,13 +8,7 @@ We love your input! We want to make contributing to this project as easy and tra
 -   Proposing new features;
 -   Becoming a maintainer;
 
-## All Changes Happen Through Pull Requests
-
-Pull requests are the best way to propose changes. We actively welcome your pull requests:
-
-1.  Fork the repo and create your branch from `develop`;
-2.  If you've changed how something works, update the documentation;
-3.  Issue that pull request!
+The documentation and ".md" files might be a bit "long", but don't let it stop you from contributing. Everyone and every contribution is welcome!
 
 ## Under the hood of test.me
 
@@ -44,9 +38,91 @@ To understand how test.me reads files, think of files as a very long string/vect
 
 ## Local Development
 
-Make sure you have installed all the tools in the [How to prepare your enviroment](./README.md#how-to-prepare-your-enviroment) section in the README.
+Make sure you have installed all the tools in the [How to prepare your environment](./README.md#how-to-prepare-your-environment) section in the README.
 
 After you make any changes to the source code, you can compile the project by running `make` in the root folder of the project. Any new `.c` files will be automatically added to the compilation process by the makefile. You can also run `make clean` to remove all the compiled files. If you want to run the project with the example inputs, as a way to easily check if the project is working properly, you can run `make run` or `make run_all` to run all the example inputs.
+
+### Install valgrind (Linux Only)
+
+Valgrind is a tool for detecting memory leaks and other memory-related errors. To install valgrind, follow these steps:
+
+```bash
+sudo apt update
+sudo apt install valgrind
+```
+
+### Install clang-format
+
+Clang-format is a tool for automatically formatting source code according to a specified coding style. To install clang-format, follow these steps:
+
+#### Linux
+
+```bash
+sudo apt update
+sudo apt install clang-format
+```
+
+#### Windows
+
+##### Install chocolatey
+
+- [Chocolatey](https://chocolatey.org/install) is "The Sane Way to Manage Software on Windows".
+
+##### Install git, gcc, make and clang-format
+
+Press `Windows+X` then press `A` to open admin Terminal.
+
+```
+choco install git
+choco install mingw
+choco install make
+choco install llvm
+choco install valgrind
+```
+
+After installing valgrind and clang-format, you can use the following commands:
+
+- `make format`: This command runs clang-format on the project's source files to automatically format the code according to the project's coding style.
+
+- `make valgrind`: This command runs the project with valgrind to detect memory issues and errors.
+
+## All Changes Happen Through Pull Requests
+
+Pull requests are the best way to propose changes. We actively welcome your pull requests:
+
+1.  Fork the repo and create your **new branch** from `develop`;
+2.  If you've changed how something works, update the documentation;
+3.  Make sure to take a look at [Before your commits](#before-your-commits) and [Before your PR](#before-your-pr)
+4.  Issue that pull request! (Make sure you're asking to merge **back** to `develop`);
+
+#### It is recommended to run `make format` and `make valgrind` before committing or making pull requests to ensure consistent formatting and identify any potential memory issues in the code.
+
+## Before your commits
+
+Try to follow this pattern in your commits:
+
+```
+[<TypeOfChangeInThisCommit>][Issue #<IssueNumber>] <InfoAboutThisCommit>
+```
+    
+- TypeOfChangeInThisCommit:
+    - [ADD] -> Added new files;
+    - [UPT] -> Updated files;
+    - [RMV] -> Removed files;
+    - [MOV] -> Moved files;
+    - [REN] -> Renamed files;
+- IssueNumber;
+    - This links the issue related to this commit;
+    - Make sure you're linking the issue in the main repo;
+    - If your commit doesn't relate to any issue, you can skip this section. But I ask you to consider opening an issue before working on your changes and then linking your commits to that new issue.
+- InfoAboutThisCommit: Anything you find relevant saying.
+
+e.g.:
+```
+[UPT][Issue #158] Update PT-BR translation.
+[ADD/UPT][Issue #134] Create files for core functions.
+[UPT] Updated CONTRIBUTING.md. 
+```
 
 ## Before your PR
 
