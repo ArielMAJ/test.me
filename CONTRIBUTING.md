@@ -8,7 +8,7 @@ We love your input! We want to make contributing to this project as easy and tra
 -   Proposing new features;
 -   Becoming a maintainer;
 
-The documentation and .md file might be a bit "long", but don't let it stop you from contributing. Everyone and every contribution is welcome!
+The documentation and ".md" files might be a bit "long", but don't let it stop you from contributing. Everyone and every contribution is welcome!
 
 ## Under the hood of test.me
 
