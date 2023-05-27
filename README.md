@@ -8,7 +8,7 @@
   - [What are the benefits of using _test.me_?](#what-are-the-benefits-of-using-testme)
   - [Example usage.](#example-usage)
   - [Why C?](#why-c)
-- [How to prepare your enviroment](#how-to-prepare-your-enviroment)
+- [How to prepare your enviroment](#how-to-prepare-your-environment)
   - [Linux](#linux)
   - [Windows](#windows)
   - [MacOS](#macos)
