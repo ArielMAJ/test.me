@@ -55,7 +55,9 @@ O _test.me_ é uma ferramenta que automatiza o processo de teste do seu código.
 
 ### Exemplo de uso
 
-<img width="702" alt="image" src="https://user-images.githubusercontent.com/62819445/236364257-c30bb286-b863-45bd-9eb8-eea5cd4b0fc8.png">
+https://github.com/ArielMAJ/test.me/assets/69123486/a90d5f43-c24d-4f14-8fe9-47c798c35dfb
+
+Obs.: Os comandos do Makefile são apenas para facilitar a construção/compilação e desenvolvimento desta ferramenta. Para usár a ferramenta em si, você só precisará compilá-la uma única vez. Após isso basta apenas executá-la com seu código e testes conforme exemplificado em parte do vídeo e no comando `make run` do Makefile.
 
 ### Por que C?
 
