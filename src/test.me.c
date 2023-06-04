@@ -22,8 +22,8 @@ int main(int argc, char *argv[]) {
 
     printf(GREEN "Usage \e[3m\e[1mmultiple folders" NO_COLOR ": " YELLOW
                  "./test.me " GREEN "<" CYAN "code_standard_name" GREEN
-                 "> <" CYAN "test_folder_standard_name" GREEN "> [" CYAN
-                 "folders_path" GREEN "]\n" NO_COLOR);
+                 "> <" CYAN "test_folder_standard_name" GREEN "> <" CYAN
+                 "folders_path" GREEN ">\n" NO_COLOR);
     printf("Example: ./test.me ./solution.c ./tests/ ./example_input/\n");
 
     printf(RED
